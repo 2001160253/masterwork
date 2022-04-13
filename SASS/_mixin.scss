@@ -1,0 +1,16 @@
+@mixin general-title($fs, $c, $fw, $ta) {
+    h1 {
+        font-size: $fs;
+        color: $c;
+        font-weight:$fw !important;
+        text-align: $ta !important;
+    }
+}
+@mixin general-span($fs, $c, $mg) {
+    span {
+        font-size: $fs;
+        display: block;
+        color: $c;
+        margin: $mg;
+    }
+}

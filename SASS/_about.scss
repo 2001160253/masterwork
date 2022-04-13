@@ -1,0 +1,68 @@
+
+// About
+
+// about breadcrumbs
+.breadcrumbs {
+    font-size: $text-sm;
+    font-weight: $font-normal;
+    padding: 0.875rem;
+    background-color: $c1;
+    a {
+        text-decoration: none;
+        color: $color-primary;
+        margin-right: 5px;
+    }
+    span {
+        margin-left: 5px;
+    }
+}
+
+// About Us
+.about {
+    padding: 5.625rem 0 3.75rem 0;
+    .container {
+        h1 {
+            text-align: center;
+            font-weight: $font-bold;
+        }
+        .about__up {
+            display: flex;
+            justify-content: left;
+            margin: 2.5rem 0 4rem 0;
+            .about__up-left {
+                flex-basis: 50%;
+                @include general-title($text-4xl, $color-title, $font-normal, left);
+                @include general-span($text-sm, $color-text, 1rem 0);
+                ul {
+                    padding-left: unset;
+                    list-style-type: none;
+                    li {
+                        margin-bottom: 0.625rem;
+                       i {
+                           padding: 5px;
+                           margin-right: 0.625rem;
+                           background-color: $c1-300;
+                           border-radius: 50%;
+                       }
+                    }
+                }
+            }
+            .about__up-right {
+                flex-basis: 50%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .about__down {
+            margin: 3rem 0;
+            display: flex;
+            justify-content: space-between;
+            .about__down-item {
+                flex-basis: 30%;
+                @include general-title($text-2xxl, $color-title, $font-normal, left);
+                @include general-span($text-sm, $color-text, 1rem 0);
+            }
+        }
+    }
+}
