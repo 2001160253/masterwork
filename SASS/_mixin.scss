@@ -6,11 +6,18 @@
         text-align: $ta !important;
     }
 }
-@mixin general-span($fs, $c, $mg) {
+@mixin general-span($fs, $c, $mg, $w:100%, $ta:center) {
     span {
         font-size: $fs;
         display: block;
         color: $c;
         margin: $mg;
+        width: $w;
     }
+}
+@mixin general-more($fs, $c, $fw, $td) {
+    font-size: $fs;
+    color: $c;
+    font-weight: $fw;
+    text-decoration: $td;
 }

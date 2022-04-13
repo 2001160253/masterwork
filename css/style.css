@@ -135,6 +135,7 @@
   display: block;
   color: #5a5a5a;
   margin: 1rem 0;
+  width: 100%;
 }
 
 .about .container .about__up .about__up-left ul {
@@ -151,6 +152,8 @@
   margin-right: 0.625rem;
   background-color: #FDF6F8;
   border-radius: 50%;
+  color: #dc4f72;
+  font-size: 0.75rem;
 }
 
 .about .container .about__up .about__up-right {
@@ -180,7 +183,7 @@
 .about .container .about__down .about__down-item h1 {
   font-size: 1.625rem;
   color: #2c3038;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   text-align: left !important;
 }
 
@@ -189,6 +192,151 @@
   display: block;
   color: #5a5a5a;
   margin: 1rem 0;
+  width: 100%;
+}
+
+.features .features__title {
+  text-align: center;
+}
+
+.features .features__title h3 {
+  font-size: 0.875rem;
+  color: #dc4f72;
+}
+
+.features .features__title h1 {
+  font-size: 2.25rem;
+  color: #2c3038;
+  font-weight: 500 !important;
+  text-align: center !important;
+}
+
+.features .features__title span {
+  font-size: 0.875rem;
+  display: block;
+  color: #5a5a5a;
+  margin: 1rem auto;
+  width: 60%;
+}
+
+.features .features__content {
+  margin-top: 5.625rem;
+}
+
+.features .features__content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.features .features__content .row .column {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  text-align: center;
+}
+
+.features .features__content .row .column .features__content-icon {
+  -webkit-transition: fadeInDown 1s;
+  transition: fadeInDown 1s;
+  margin: 0 auto 1.2rem auto;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background-color: #dc4f72;
+  position: relative;
+}
+
+.features .features__content .row .column .features__content-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.features .features__content .row .column h1 {
+  font-size: 1.25rem;
+  color: #2c3038;
+  font-weight: 500 !important;
+  text-align: center !important;
+}
+
+.features .features__content .row .column .description {
+  display: none;
+}
+
+.features .features__content .row .column .description span {
+  font-size: 0.875rem;
+  display: block;
+  color: #5a5a5a;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.features .features__content .row .column .description a {
+  font-size: 1.125rem;
+  color: #dc4f72;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.features .features__content .row .column .description a:hover {
+  text-decoration: underline;
+}
+
+.features .features__content .row .column .description .test-1 {
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.features .features__content .row .column .description .test-2 {
+  -webkit-transition: all 0.1s ease-in-out 0.5s;
+  transition: all 0.1s ease-in-out 0.5s;
+}
+
+.features .features__content .row .column .description .test-3 {
+  -webkit-transition: all 0.1s ease-in-out 1s;
+  transition: all 0.1s ease-in-out 1s;
+}
+
+.features .features__content .row .column:hover .test-1 {
+  -webkit-transform: translateY(-3.125rem);
+          transform: translateY(-3.125rem);
+}
+
+.features .features__content .row .column:hover .test-2 {
+  -webkit-transform: translateY(-3.125rem);
+          transform: translateY(-3.125rem);
+}
+
+.features .features__content .row .column:hover .test-3 {
+  -webkit-transform: translateY(-3.125rem);
+          transform: translateY(-3.125rem);
+}
+
+.features .features__content .row .column:hover .description {
+  display: block;
+}
+
+.features .features__content .row .column .test-1 {
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+
+.features .features__content .row .column .test-2 {
+  -webkit-transition: all 0.2s linear 0.1s;
+  transition: all 0.2s linear 0.1s;
+}
+
+.features .features__content .row .column .test-3 {
+  -webkit-transition: all 0.2s linear 0.2s;
+  transition: all 0.2s linear 0.2s;
 }
 
 * {

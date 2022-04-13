@@ -43,6 +43,8 @@
                            margin-right: 0.625rem;
                            background-color: $c1-300;
                            border-radius: 50%;
+                           color: $color-primary;
+                           font-size: $text-xs;
                        }
                     }
                 }
@@ -60,8 +62,81 @@
             justify-content: space-between;
             .about__down-item {
                 flex-basis: 30%;
-                @include general-title($text-2xxl, $color-title, $font-normal, left);
+                @include general-title($text-2xxl, $color-title, $font-semibold, left);
                 @include general-span($text-sm, $color-text, 1rem 0);
+            }
+        }
+    }
+}
+
+// Features
+.features {
+    .features__title {
+        h3 {
+            font-size: $text-sm;
+            color: $color-primary;
+        }
+        text-align: center;
+        @include general-title($text-4xl, $color-title, $font-semibold, center);
+        @include general-span($text-sm, $color-text, 1rem auto, 60%);
+    }
+    .features__content {
+        margin-top: 5.625rem;
+        .row {
+            display: flex;
+            flex-direction: row;
+            .column{
+                flex-basis: 25%;
+                text-align: center;
+                .features__content-icon {
+                    transition: fadeInDown 1s;
+                    margin: 0 auto 1.2rem auto;
+                    width: 3.75rem;
+                    height: 3.75rem;
+                    border-radius: 50%;
+                    background-color: $color-primary;
+                    position: relative;
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: $text-xl;
+                        color: $color-white;
+                    }
+                }
+                @include general-title($text-xl, $color-title, $font-semibold, center);
+                .description {
+                    display: none;
+                    @include general-span($text-sm, $color-text, 1rem 0);
+                    a {
+                        @include general-more( $text-lg, $color-primary,  $font-bold, none);
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    @for $i from 0 to 3 {
+                        .test-#{$i+1} {
+                            transition: all 0.1s ease-in-out 0.5s*$i;
+                        }
+                    }
+                }
+                &:hover {
+
+                    @for $i from 0 to 3 {
+                        .test-#{$i+1} {
+                            transform: translateY(-3.125rem);
+                        }
+                    }
+                    .description {
+                        display: block;
+                    }
+                }
+                @for $i from 0 to 3 {
+                    .test-#{$i+1} {
+                       transition: all 0.2s linear 0.1s*$i;
+                    }
+                }
             }
         }
     }
