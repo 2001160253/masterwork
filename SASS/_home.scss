@@ -1,7 +1,16 @@
 .header {
   height: 90px;
-  box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+  box-shadow: 0 3px 9px rgba(83, 76, 76, 0.05);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: $color-white;
+
   .container {
+    max-width: 1200px;
+    padding: 0 25px;
+
     .logo {
       color: $color-primary;
       font-size: $text-2xxl;
@@ -9,28 +18,35 @@
       letter-spacing: -1px;
       text-decoration: none;
     }
+
     .menu {
       ul {
         list-style-type: none;
         width: 648px;
+        margin: 0;
+
         li {
           display: flex;
           align-items: center;
           position: relative;
+
           &:hover {
             a {
               color: $color-primary;
             }
+
             span {
               width: 20px;
               transition: all 0.5s;
             }
           }
+
           a {
             text-decoration: none;
             font-size: $text-base;
             color: $color-text;
           }
+
           span {
             width: 0px;
             background-color: $color-primary;
@@ -41,22 +57,316 @@
           }
 
           .btn-schedual {
-            border-color: $color-primary;
-            font-size: $text-sm;
-            font-weight: $font-bold;
-            color: $color-primary;
             width: 196px;
-            height: 54px;
+            @include button-primary-color;
+
             &:hover {
-              color: $color-white;
-              background-color: $color-primary;
-              transition: all 0.3s;
+              @include button-primary-color--hover;
             }
           }
         }
+
         .active {
           a {
             color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  margin-top: 90px;
+  background-color: $color-bg-light;
+
+  .execute {
+    .container {
+      max-width: 1200px;
+      padding: 0 25px;
+      padding-top: 80px;
+
+      .row {
+        .col {
+          h1 {
+            font-size: $text-5xxl;
+            font-weight: $font-semibold;
+            color: $color-title;
+            line-height: 57.5px;
+          }
+
+          p {
+            font-size: $text-xl;
+            color: $color-text;
+            font-weight: $font-normal;
+            max-width: 450px;
+            margin-top: $text-base;
+            margin-bottom: $text-5xl;
+          }
+
+          a {
+            @include button-primary-color;
+            text-transform: uppercase;
+
+            font-weight: $font-semibold;
+            width: 156px;
+
+            &:hover {
+              @include button-primary-color--hover;
+            }
+          }
+
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .choose {
+    background-color: $color-white;
+    padding: $text-5xl 0;
+
+    .row {
+      .col {
+        .choose__top {
+          .why {
+            font-size: $text-base;
+            font-weight: $font-semibold;
+            color: $color-primary;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            text-align: center;
+            margin-bottom: 5px;
+          }
+
+          h3 {
+            color: $color-title;
+            font-size: $text-4xxl;
+            font-weight: $font-semibold;
+            text-align: center;
+            width: 750px;
+            margin: auto;
+            line-height: 1;
+          }
+
+          p {
+            color: $color-text;
+            font-size: $text-base;
+            font-weight: $font-normal;
+
+            width: 750px;
+            text-align: center;
+            margin: 16px auto;
+          }
+        }
+
+        .choose__bottom {
+          margin-top: $text-4xxl;
+
+          .container {
+            width: 1200px;
+            padding: 0 25px 26px 25px;
+
+            .row {
+              .col-4 {
+                div {
+                  background-color: $color-bg-light;
+                  padding: $text-5xl 32px;
+
+                  &:hover {
+                    background-color: $color-white;
+                    border: 1px solid #eee;
+                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+                    transform: translateY(-0.5rem);
+                    transition: all 0.3s ease-in;
+                  }
+
+                  &:focus-visible {
+                    outline: none;
+                  }
+
+                  a {
+                    width: 297px;
+                    height: 212px;
+                    margin: auto;
+                    text-align: center;
+
+                    h3 {
+                      color: $color-title;
+                      font-size: $text-2xxl;
+                      font-weight: $font-semibold;
+                      margin: $text-base 0;
+                    }
+
+                    p {
+                      color: $color-text;
+                      font-size: $text-base;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 48px 0;
+
+    .container {
+      max-width: 1200px;
+      padding: 16px 25px;
+      margin-top: $text-base;
+      margin-bottom: $text-base;
+
+      .row-top {
+        .col-6 {
+          div {
+            h1 {
+              font-size: $text-base;
+              font-weight: $font-semibold;
+              margin-bottom: 5px;
+              color: $color-primary;
+              text-transform: uppercase;
+            }
+
+            h3 {
+              font-size: 35px;
+              color: $color-title;
+              font-weight: $font-semibold;
+              margin-bottom: 1.5rem;
+            }
+
+            p {
+              font-size: $text-base;
+              color: $color-text;
+              margin-bottom: $text-5xxl;
+            }
+
+            a {
+              @include button-primary-color;
+              width: 156px;
+              text-transform: uppercase;
+              font-size: $text-sm;
+              background-color: $color-primary;
+              color: $color-white;
+
+              &:hover {
+                background-color: #d62f58;
+                border-color: #cf2952;
+                transition: all 0.3s ease-in;
+              }
+            }
+          }
+        }
+
+        .col-left {
+          padding: 0 48px 0 15px;
+        }
+
+        .col-right {
+          padding: 0 15px 0 48px;
+
+          div {
+            img {
+              transition: 0.3s ease-in-out;
+            }
+
+            img:hover {
+              transform: translateY(-0.5rem);
+              transition: 0.3 ease-in-out;
+            }
+          }
+        }
+      }
+
+      .row-bottom {
+        margin-top: 89px;
+
+        .col-4 {
+          div {
+            background-color: $color-white;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            padding: 32px;
+
+            h4 {
+              font-size: $text-base;
+              font-weight: $font-semibold;
+              margin: 0;
+            }
+
+            .counter {
+              font-size: $text-5xxl;
+              color: $color-primary;
+              font-weight: $font-bold;
+              line-height: 1;
+              margin: 10px 0 15px 0;
+            }
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .weare {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.33)
+      ),
+      url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 480px;
+    .container {
+      max-width: 1200px;
+      padding: 32px 25px;
+      .row {
+        padding-top: 40px;
+        .col-6 {
+          h2 {
+            color: $color-white;
+            font-size: $text-3xl;
+            font-weight: $font-semibold;
+          }
+
+          p {
+            font-size: $text-base;
+            line-height: 24.5px;
+            color: #eee;
+            margin: 24px 0 48px 0;
+          }
+
+          a {
+            width: 145px;
+            height: 54px;
+            color: $color-text;
+            background-color: $color-white;
+            text-transform: uppercase;
+            font-size: $text-sm;
+            border: none;
+            font-weight: $font-semibold;
+
+            &:hover {
+              color: #212529;
+              background-color: #e2e6ea;
+              border-color: #dae0e5;
+              transition: all 0.5s ease-in;
+            }
           }
         }
       }

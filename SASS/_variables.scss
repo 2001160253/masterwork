@@ -19,5 +19,20 @@ $text-2xl: 1.5rem; /* 24px */
 $text-2xxl: 1.625rem; /* 26px */
 $text-3xl: 1.875rem; /* 30px */
 $text-4xl: 2.25rem; /* 36px */
+$text-4xxl: 2.875rem; /* 40px */
 $text-5xl: 3rem; /* 48px */
+$text-5xxl: 3.125rem; /* 50px */
 $text-6xl: 3.75rem; /* 60px */
+
+@mixin button-primary-color {
+  border-color: $color-primary;
+  font-size: $text-sm;
+  font-weight: $font-bold;
+  color: $color-primary;
+  height: 54px;
+}
+@mixin button-primary-color--hover {
+  color: $color-white;
+  background-color: $color-primary;
+  transition: all 0.3s;
+}
