@@ -1,23 +1,47 @@
 @mixin general-title($fs, $c, $fw, $ta) {
-    h1 {
         font-size: $fs;
         color: $c;
         font-weight:$fw !important;
         text-align: $ta !important;
-    }
 }
 @mixin general-span($fs, $c, $mg, $w:100%, $ta:center) {
-    span {
         font-size: $fs;
         display: block;
         color: $c;
         margin: $mg;
         width: $w;
-    }
+        text-align: $ta;
 }
 @mixin general-more($fs, $c, $fw, $td) {
     font-size: $fs;
     color: $c;
     font-weight: $fw;
     text-decoration: $td;
+}
+@mixin general-icon($w, $h, $bg, $c, $fs) {
+        position: relative;
+        width: $w;
+        height: $h;
+        display: inline-block;
+        background-color: $bg;
+        border-radius: 50%;
+        margin-right: 0.875rem;
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $c;
+            font-size: $fs;
+        }
+}
+@mixin  general-btn($pd, $bd, $bg, $c, $bo:none) {
+        text-align: center;
+        display: inline-block;
+        padding: $pd;
+        border-radius: $bd;
+         background-color: $bg;
+        border: $bo;
+        color: $c;
+        transition: all 0.4s;
 }

@@ -1,1 +1,1 @@
-https://masterwork-8yarq7chf-2001160253.vercel.app/
+https://masterwork.vercel.app/

@@ -31,8 +31,12 @@
             margin: 2.5rem 0 4rem 0;
             .about__up-left {
                 flex-basis: 50%;
-                @include general-title($text-4xl, $color-title, $font-normal, left);
-                @include general-span($text-sm, $color-text, 1rem 0);
+                h1 {
+                    @include general-title($text-4xl, $color-title, $font-normal, left);
+                }
+                span {
+                    @include general-span($text-sm, $color-text, 1rem 0);
+                }
                 ul {
                     padding-left: unset;
                     list-style-type: none;
@@ -62,8 +66,12 @@
             justify-content: space-between;
             .about__down-item {
                 flex-basis: 30%;
-                @include general-title($text-2xxl, $color-title, $font-semibold, left);
-                @include general-span($text-sm, $color-text, 1rem 0);
+                h1 {
+                    @include general-title($text-2xxl, $color-title, $font-semibold, left);
+                }
+                span {
+                    @include general-span($text-sm, $color-text, 1rem 0);
+                }
             }
         }
     }
@@ -71,72 +79,261 @@
 
 // Features
 .features {
+    padding: 3.75rem 0;
+    background-color: $c1;
     .features__title {
         h3 {
-            font-size: $text-sm;
-            color: $color-primary;
+            @include general-title($text-sm, $color-primary, $font-semibold, center);
         }
         text-align: center;
-        @include general-title($text-4xl, $color-title, $font-semibold, center);
-        @include general-span($text-sm, $color-text, 1rem auto, 60%);
+        h1 {
+            @include general-title($text-4xl, $color-title, $font-semibold, center);
+        }
+        span {
+            @include general-span($text-sm, $color-text, 1rem auto, 60%);
+        }
     }
     .features__content {
         margin-top: 5.625rem;
         .row {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             .column{
-                flex-basis: 25%;
+                flex-basis: 22%;
+                height: 15.625rem;
                 text-align: center;
-                .features__content-icon {
-                    transition: fadeInDown 1s;
-                    margin: 0 auto 1.2rem auto;
-                    width: 3.75rem;
-                    height: 3.75rem;
-                    border-radius: 50%;
-                    background-color: $color-primary;
-                    position: relative;
-                    i {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: $text-xl;
-                        color: $color-white;
+                background-color: $color-white;
+                border-radius: 0.625rem;
+                position: relative;
+                .title {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .features__content-icon {
+                        transition: fadeInDown 1s;
+                        margin: 0 auto 1.2rem auto;
+                        width: 3.75rem;
+                        height: 3.75rem;
+                        border-radius: 50%;
+                        background-color: $color-primary;
+                        position: relative;
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: $text-xl;
+                            color: $color-white;
+                        }
+                    }
+                    h1 {
+                        @include general-title($text-xl, $color-title, $font-semibold, center);
                     }
                 }
-                @include general-title($text-xl, $color-title, $font-semibold, center);
                 .description {
-                    display: none;
-                    @include general-span($text-sm, $color-text, 1rem 0);
+                    position: absolute;
+                    bottom: 1.25rem;
+                    opacity: 0;
+                    // display: none;
+                    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    span {
+                        @include general-span($text-sm, $color-text, 1rem 0);
+                    }
                     a {
                         @include general-more( $text-lg, $color-primary,  $font-bold, none);
                         &:hover {
                             text-decoration: underline;
                         }
                     }
-                    @for $i from 0 to 3 {
-                        .test-#{$i+1} {
-                            transition: all 0.1s ease-in-out 0.5s*$i;
-                        }
-                    }
                 }
                 &:hover {
 
-                    @for $i from 0 to 3 {
+                    @for $i from 0 to 2 {
                         .test-#{$i+1} {
-                            transform: translateY(-3.125rem);
+                            transform: translateY(-5.625rem);
                         }
                     }
                     .description {
-                        display: block;
+                        // display: block;
+                        opacity: 1;
+                        animation: zoomIn 0.4s;
                     }
                 }
-                @for $i from 0 to 3 {
+                @for $i from 0 to 2 {
                     .test-#{$i+1} {
-                       transition: all 0.2s linear 0.1s*$i;
+                       transition: all 0.5s linear 0.1s*$i;
                     }
                 }
+            }
+        }
+    }
+}
+
+// Introduce
+.intro {
+    padding: 5.625rem 0;
+    .container {
+        .intro__title {
+            h3 {
+                @include general-title($text-sm, $color-primary, $font-semibold, center);
+            }
+            h1 {
+                @include general-title($text-4xl, $color-title, $font-normal, center);
+            }
+            span {
+                @include general-span($text-sm, $color-text, 1rem auto, 70%);
+            }
+        }
+        .intro__content {
+            margin-top: 3.75rem;
+            text-align: center;
+            .intro__content-img {
+                position: relative;
+                img {
+                    display: block;
+                    margin: auto;
+                    width: 50%;
+                    transition: all 0.4s;
+                    &:hover {
+                        transform: translateY(-1.25rem);
+                    }
+                }
+                .intro__content-icon {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    a {
+                        @include general-icon(3rem, 3rem, $color-white, $color-primary, 1rem);
+                    }
+                }
+            }
+            .btn-request {
+                @include general-btn(0.625rem 1.875rem, 0.25rem, $color-primary,  $color-white);
+                margin-top: 3.75rem;
+                transition: all 0.4s;
+                &:hover {
+                    background-color: $c1-400;
+                }
+            }
+        }
+    }
+}
+//  Customer
+.customer {
+    .owl-carousel
+    {
+        .owl-item  {
+            img {
+                filter: grayscale(100%);
+                transition: all 1s;
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+    
+        }
+    } 
+}
+
+// Team Member
+.team {
+    .team__title {
+        width: 60%;
+        margin: 6.25rem auto 3.75rem auto;
+        h3 {
+            @include general-title($text-sm, $color-primary, $font-semibold, center);
+        }
+        h1 {
+            @include general-title($text-4xl, $color-title, $font-normal, center);
+        }
+        span {
+            @include general-span($text-sm, $color-text, 1rem 0);
+        }
+    }
+    .team__content {
+        .row {
+            display: flex;
+            flex-direction: row;
+            .column {
+                width: 100%;
+                flex-basis: 25%;
+                padding-bottom: 3.25rem;
+                transition: all 0.4s;
+                &:hover {
+                    transform: translateY(-1rem);
+                }
+                .team__item {
+                    height: 20rem;
+                    background-color: $color-white;
+                    display: flex;
+                    flex-direction: column;
+                    .team__item-img {
+                        height: 70%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0.625rem 0.625rem 0 0;
+                            vertical-align: middle;
+                        }
+                    }
+                    .team__item-content {
+                        height: 30%;
+                        padding-top: 0.625rem;
+                        h1 {
+                            @include general-title($text-xl, $color-title, $font-bold, left);
+                        }
+                        span {
+                            @include general-span($text-sm, $color-text, 5px 0, 100%, left);
+                        }
+                        .item__logo {
+                           .item__logo-fb {
+                                @include general-icon(1.5rem, 1.5rem, #3B5998, $color-white, 1rem);
+                            }
+                           .item__logo-tw {
+                                @include general-icon(1.5rem, 1.5rem, #1DA1F2, $color-white, 1rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// Build brand
+
+.build {
+    text-align: center;
+    .build__title {
+        width: 60%;
+        margin: 6.25rem auto 3.75rem auto;
+        h1 {
+            @include general-title($text-4xl, $color-title, $font-normal, center);
+        }
+        span {
+            @include general-span($text-sm, $color-text, 1rem 0);
+        }
+    }
+    .build__btn {
+        .build__btn-1 {
+            @include general-btn(0.625rem 1.5625rem, 0.25rem, $color-white,  $color-primary, 1px solid $color-primary);
+            margin-right: 1.25rem;
+            transition: all 0.4s;
+            &:hover {
+                background-color: $c1-400;
+                color: $color-white
+            }
+        }
+        .build__btn-2 {
+            @include general-btn(0.625rem 1.5625rem, 0.25rem, $color-primary,  $color-white);
+            &:hover {
+                background-color: $c1-400;
             }
         }
     }
