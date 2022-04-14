@@ -3,6 +3,8 @@
 
 // about breadcrumbs
 .breadcrumbs {
+    position: relative;
+    top: 90px;
     font-size: $text-sm;
     font-weight: $font-normal;
     padding: 0.875rem;
@@ -266,6 +268,13 @@
                 transition: all 0.4s;
                 &:hover {
                     transform: translateY(-1rem);
+                    .team__item {
+                        .team__item-content {
+                            h1 {
+                                color: $color-primary;
+                            }
+                        }
+                    }
                 }
                 .team__item {
                     height: 20rem;
@@ -279,6 +288,7 @@
                             height: 100%;
                             border-radius: 0.625rem 0.625rem 0 0;
                             vertical-align: middle;
+                            cursor: pointer;
                         }
                     }
                     .team__item-content {

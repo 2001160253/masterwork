@@ -385,6 +385,8 @@
 }
 
 .breadcrumbs {
+  position: relative;
+  top: 90px;
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0.875rem;
@@ -811,6 +813,10 @@
           transform: translateY(-1rem);
 }
 
+.team .team__content .row .column:hover .team__item .team__item-content h1 {
+  color: #dc4f72;
+}
+
 .team .team__content .row .column .team__item {
   height: 20rem;
   background-color: #fff;
@@ -832,6 +838,7 @@
   height: 100%;
   border-radius: 0.625rem 0.625rem 0 0;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .team .team__content .row .column .team__item .team__item-content {
