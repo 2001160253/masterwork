@@ -5,13 +5,13 @@ $color-text: #5a5a5a;
 $color-bg-light: #f7f9fc;
 $color-white: #fff;
 // about
-$c1: #F7F9FC;
-$c1-300: #FDF6F8;
+$c1: #f7f9fc;
+$c1-300: #fdf6f8;
 $c1-350: #eaeaea;
 $c1-400: #d62f58;
-$c2-50: #8F95A8;
-$c2-100:#41414D;
-$c2: #0D1326;
+$c2-50: #8f95a8;
+$c2-100: #41414d;
+$c2: #0d1326;
 $font-light: 300;
 $font-normal: 400;
 $font-semibold: 500;
@@ -42,4 +42,40 @@ $text-6xl: 3.75rem; /* 60px */
   color: $color-white;
   background-color: $color-primary;
   transition: all 0.3s;
+}
+
+@mixin title-h6 {
+  font-size: $text-base;
+  line-height: 20px;
+  text-align: center;
+  font-weight: $font-semibold;
+  color: $color-primary;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+@mixin title-h3 {
+  font-size: 46px;
+  color: $color-title;
+  line-height: 1;
+  font-weight: $font-semibold;
+  text-align: center;
+}
+
+@mixin title-p {
+  color: $color-text;
+  font-size: $text-base;
+  line-height: 22.5px;
+  font-weight: $font-normal;
+  text-align: center;
+  width: 750px;
+  margin: 16px auto;
+}
+
+@mixin transform-rem5 {
+  transform: translateY(-0.5rem);
+}
+
+@mixin transition-3-ease-in {
+  transition: all 0.3s ease-in;
 }
