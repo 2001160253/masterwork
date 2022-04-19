@@ -660,13 +660,24 @@
     }
   }
   .client {
+    background-image: linear-gradient(
+        to right,
+        rgba(247, 249, 252, 0.77),
+        rgba(247, 249, 252, 0.77)
+      ),
+      url(../images/b2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     .container {
       max-width: 1200px;
-      padding: 0 25px;
+      padding: 48px 25px;
       .row {
         .title-client {
           h6 {
             @include title-h6;
+            margin-bottom: 5px;
           }
           h3 {
             @include title-h3;
@@ -716,6 +727,62 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .ready {
+    padding: 48px 0;
+    background-color: $color-white;
+    .container {
+      padding: 16px 25px;
+      .row {
+        .col {
+          div {
+            h3 {
+              color: $color-title;
+              font-size: 46px;
+              line-height: 1;
+              font-weight: $font-semibold;
+              text-align: center;
+              max-width: 750px;
+              margin: auto;
+            }
+            p {
+              color: $color-text;
+              font-size: $text-sm;
+              line-height: 22, 5px;
+              font-weight: $font-normal;
+              width: 750px;
+              margin: 16px auto;
+            }
+            .buttons-ready {
+              margin-top: 48px;
+              display: flex;
+              justify-content: center;
+              a {
+                @include button-primary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                width: 163px;
+                margin: 0 8px;
+                &:hover {
+                  @include button-primary-color--hover;
+                }
+              }
+              .ready-btn--active {
+                background-color: $color-primary;
+                color: $color-white;
+                &:hover {
+                  color: #fff;
+                  background-color: #d62f58;
+                  border-color: #cf2952;
                 }
               }
             }

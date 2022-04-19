@@ -757,9 +757,18 @@
   transition: all 0.3s ease-in;
 }
 
+.main .client {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(247, 249, 252, 0.77)), to(rgba(247, 249, 252, 0.77))), url(../images/b2.jpg);
+  background-image: linear-gradient(to right, rgba(247, 249, 252, 0.77), rgba(247, 249, 252, 0.77)), url(../images/b2.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .main .client .container {
   max-width: 1200px;
-  padding: 0 25px;
+  padding: 48px 25px;
 }
 
 .main .client .container .row .title-client h6 {
@@ -769,6 +778,7 @@
   font-weight: 500;
   color: #dc4f72;
   text-transform: uppercase;
+  margin-bottom: 5px;
   margin-bottom: 5px;
 }
 
@@ -833,6 +843,82 @@
 .main .client .container .row .col div .container .row .col-6 .wrapper .content .avatar-name p {
   font-size: 13px;
   color: #5a5a5a;
+}
+
+.main .ready {
+  padding: 48px 0;
+  background-color: #fff;
+}
+
+.main .ready .container {
+  padding: 16px 25px;
+}
+
+.main .ready .container .row .col div h3 {
+  color: #2c3038;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 500;
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+}
+
+.main .ready .container .row .col div p {
+  color: #5a5a5a;
+  font-size: 0.875rem;
+  line-height: 22, 5px;
+  font-weight: 400;
+  width: 750px;
+  margin: 16px auto;
+}
+
+.main .ready .container .row .col div .buttons-ready {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .ready .container .row .col div .buttons-ready a {
+  border-color: #dc4f72;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #dc4f72;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  width: 163px;
+  margin: 0 8px;
+}
+
+.main .ready .container .row .col div .buttons-ready a:hover {
+  color: #fff;
+  background-color: #dc4f72;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .ready .container .row .col div .buttons-ready .ready-btn--active {
+  background-color: #dc4f72;
+  color: #fff;
+}
+
+.main .ready .container .row .col div .buttons-ready .ready-btn--active:hover {
+  color: #fff;
+  background-color: #d62f58;
+  border-color: #cf2952;
 }
 
 html {
