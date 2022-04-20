@@ -574,7 +574,7 @@
   line-height: 22.5px;
   font-weight: 400;
   text-align: center;
-  width: 750px;
+  max-width: 750px;
   margin: 16px auto;
 }
 
@@ -667,7 +667,7 @@
   line-height: 22.5px;
   font-weight: 400;
   text-align: center;
-  width: 750px;
+  max-width: 750px;
   margin: 16px auto;
 }
 
@@ -809,7 +809,7 @@
   line-height: 22.5px;
   font-weight: 400;
   text-align: center;
-  width: 750px;
+  max-width: 750px;
   margin: 16px auto;
 }
 
