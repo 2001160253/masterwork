@@ -540,6 +540,7 @@
 
 .footer-home .container .footer__down .footer__down-content {
   max-width: 490px;
+  padding: 0;
 }
 
 .footer-home .container .footer__down .footer__down-content p {
@@ -559,7 +560,8 @@
 }
 
 .footer-home .container .footer__down .footer__down-icon {
-  max-width: 222px;
+  max-width: 203px;
+  padding: 0;
 }
 
 .footer-home .container .footer__down .footer__down-icon a {

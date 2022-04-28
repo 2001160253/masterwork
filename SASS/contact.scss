@@ -385,88 +385,6 @@
   }
 }
 
-// Footer
-// .footer-home {
-//   background-color: $c1;
-//   .footer__up {
-//     padding: 3.75rem 0;
-//     border-bottom: 1px solid $c1-350;
-//     display: flex;
-//     justify-content: space-between;
-//     .footer__up-item1 {
-//       flex: 1;
-//       h1 {
-//         @include general-title($text-lg, $color-title, $font-bold, left);
-//       }
-//       span {
-//         @include general-span($text-sm, $color-text, 1rem 0, 100%, left);
-//         transition: all 0.4s;
-//         cursor: pointer;
-//         &:hover {
-//           color: $color-primary;
-//         }
-//       }
-//     }
-//     .footer__up-item2 {
-//       margin-left: 6rem;
-//       flex: 3;
-//       h1 {
-//         @include general-title($text-lg, $color-title, $font-bold, center);
-//       }
-//       .footer__up-email {
-//         padding: 2rem;
-//         border-radius: 0.625rem;
-//         background-color: $color-white;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-around;
-//         input {
-//           padding: 0.625rem 7rem 0.625rem 0.625rem;
-//           font-size: $text-sm;
-//           border-radius: 5px;
-//           border: none;
-//           background-color: $c1;
-//           outline: none;
-//         }
-//         a {
-//           button {
-//             @include general-btn(
-//               0.625rem 1.875rem,
-//               0.25rem,
-//               $color-primary,
-//               $color-white
-//             );
-//             display: inline;
-//           }
-//         }
-//         span {
-//           @include general-span($text-sm, $color-text, 1rem 0 0 0, 100%, left);
-//         }
-//       }
-//     }
-//   }
-//   .footer__down {
-//     padding: 2.5rem 0;
-//     display: flex;
-//     justify-content: space-between;
-//     .footer__down-content {
-//       span {
-//         @include general-span($text-sm, $color-text, 1rem 0);
-//       }
-//     }
-//     .footer__down-icon {
-//       a {
-//         color: unset;
-//         font-size: $text-sm;
-//         margin-right: 1.25rem;
-//         transition: all 0.4s;
-//         &:hover {
-//           color: $color-primary;
-//         }
-//       }
-//     }
-//   }
-// }
 .footer-home {
   padding: 48px 0;
   background-color: $color-bg-light;
@@ -583,6 +501,7 @@
 
       .footer__down-content {
         max-width: 490px;
+        padding: 0;
 
         p {
           line-height: 22px;
@@ -602,7 +521,8 @@
       }
 
       .footer__down-icon {
-        max-width: 222px;
+        max-width: 203px;
+        padding: 0;
 
         a {
           color: $color-text;
