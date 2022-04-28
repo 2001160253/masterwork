@@ -43,11 +43,20 @@
                     </a>
                     <div class="menu">
                         <ul class="d-flex justify-content-between">
-                            <li><a href="./index.html">Home</a><span></span></li>
+                            <li class="active"><a href="#">Home</a><span></span></li>
                             <li><a href="./about.html">About</a><span></span></li>
                             <li><a href="./services.html">Services</a> <span></span></li>
-                            <li><a href="#">Pages</a> <span></span></li>
-                            <li class="active"><a href="./contact.html">Contact</a> <span></span></li>
+                            <li class="position-relative li-drop-menu">
+                                <a href="#" class="menu-down">
+                                    Pages
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="drop-down">
+                                    <a href="./post.html">Blog post</a>
+                                    <a href="./singlePost.html">Blog single</a>
+                                </div>
+                            </li>
+                            <li><a href="./contact.html">Contact</a> <span></span></li>
                             <li>
                                 <a href="#"
                                     class="btn btn-outline-primary btn-schedual d-flex justify-content-center align-items-center">SCHEDULE
@@ -59,7 +68,6 @@
             </div>
         </div>
     </header>
-
     <!-- breadcrumbs -->
     <div class="breadcrumbs">
         <div class="container">
@@ -77,8 +85,8 @@
                     <main class="contact-us-main">
                         <header class="us-heading">Contact Us</header>
                         <div class="us-content">
-                            <div class="row">
-                                <div class="col-lg-6 d-flex align-items-center">
+                            <div class="row row-us">
+                                <div class="col-lg-6 col-img align-items-center">
                                     <img src="./images/img-contact/contact.jpg" class="img-fluid" alt="contact">
                                 </div>
                                 <div class="col-lg-6 text-center">
@@ -191,46 +199,55 @@
     <!-- Footer -->
     <footer class="footer-home">
         <div class="container">
-            <div class="footer__up">
-                <div class="footer__up-item1">
-                    <h1>Company</h1>
-                    <span>Home</span>
-                    <span>About Us</span>
-                    <span>Services</span>
-                    <span>Blog</span>
-                    <span>Contact Us</span>
-                </div>
-                <div class="footer__up-item1">
-                    <h1>Useful Links</h1>
-                    <span>Case Studies</span>
-                    <span>Our Branches</span>
-                    <span>Latest Media</span>
-                    <span>About Company</span>
-                    <span>Our People</span>
-                </div>
-                <div class="footer__up-item1">
-                    <h1>Our Services</h1>
-                    <span>Privacy Policy</span>
-                    <span>Our Terms</span>
-                    <span>Services</span>
-                    <span>Landing Page</span>
-                    <span>Our People</span>
-                </div>
-                <div class="footer__up-item2">
-                    <h1>Newsletter</h1>
-                    <div class="footer__up-email">
-                        <p>Get latest updates and offers.</p>
-                        <div class="container-email">
-                            <input type="email" placeholder="Email Address">
-                            <a><button>Go</button></a><br>
+            <div class="row footer__up">
+                <div class="col-lg-6 footer__col-left">
+                    <div class="row">
+                        <div class="col-md-4 footer__up-item1">
+                            <h3>Company</h3>
+                            <p>Home</p>
+                            <p>About Us</p>
+                            <p>Services</p>
+                            <p>Blog</p>
+                            <p>Contact Us</p>
                         </div>
-                        <span>Sign up for our latest news & articles. We won’t give you spam mails.</span>
+                        <div class="col-md-4 footer__up-item1">
+                            <h3>Useful Links</h3>
+                            <p>Case Studies</p>
+                            <p>Our Branches</p>
+                            <p>Latest Media</p>
+                            <p>About Company</p>
+                            <p>Our People</p>
+                        </div>
+                        <div class="col-md-4 footer__up-item1">
+                            <h3>Our Services</h3>
+                            <p>Privacy Policy</p>
+                            <p>Our Terms</p>
+                            <p>Services</p>
+                            <p>Landing Page</p>
+                            <p>Our People</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 footer__col-right">
+                    <div class="footer__up-item2">
+                        <h3>Newsletter</h3>
+                        <div class="footer__up-email">
+                            <h4>Get latest updates and offers.</h4>
+                            <form action="#">
+                                <input type="email" placeholder="Email address" required>
+                                <button type="submit">Go</button>
+                            </form>
+                            <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer__down">
+            <div class="row footer__down">
                 <div class="footer__down-content">
-                    <span>© 2020 Masterwork. All rights reserved | Designed by W3Layouts</span>
+                    <p>
+                        © 2020 Masterwork. All rights reserved | Designed by
+                        <a href="https://w3layouts.com/">W3Layouts</a>
+                    </p>
                 </div>
                 <div class="footer__down-icon">
                     <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
