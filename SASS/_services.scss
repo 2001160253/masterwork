@@ -15,6 +15,9 @@ html {
     }
     .services__content {
         display: flex;
+        @include MediaQuery($sm){
+            flex-direction: column;
+        }
         .services__left {
             padding: 0 1rem;
             flex-basis: 50%;
@@ -42,6 +45,12 @@ html {
             flex-basis: 50%;
             .row {
                 display: flex;
+                @include MediaQuery($sm){
+                    flex-direction: row;
+                }
+                @include MediaQuery($xs){
+                    flex-direction: column;
+                }
                 .column {
                     flex-basis: 50%;
                     padding: 0 1.875rem;
@@ -51,24 +60,33 @@ html {
                     &:nth-of-type(4) {
                         margin-top: 3rem;
                     }
-                    .img-icon {
-                        position: relative;
-                        width: 5rem;
-                        height: 5rem;
-                        border-radius: 50%;
-                        background-color: $c1;
-                        display: block;
-                        img {
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
-                        }
+                    @include MediaQuery($sm) {
+                        margin-top: 1rem;
                     }
-                    h1 {
-                        a {
-                            @include general-title($text-xl, unset, $font-bold, left);
-                            text-decoration: none;
+                    .title-logo {
+                        .img-icon {
+                            position: relative;
+                            width: 5rem;
+                            height: 5rem;
+                            border-radius: 50%;
+                            background-color: $c1;
+                            display: block;
+                            img {
+                             @include MediaQuery($xs){
+                                width: 100%;
+                                padding-right: 0.625rem;
+                                }
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                        h1 {
+                            a {
+                                @include general-title($text-xl, unset, $font-bold, left);
+                                text-decoration: none;
+                            }
                         }
                     }
                     span {
@@ -94,16 +112,25 @@ html {
         }
         h1 {
             @include general-title($text-4xxl, $color-title, $font-bold, center);
+            @include MediaQuery($sm) {
+                font-size: $text-2xl;
+            }
         }
         span {
-            @include general-span($text-sm, $color-text, 1rem auto, 100%);
+            @include general-span($text-base, $color-text, 1rem auto, 100%);
         }
     }
     .product__content {
         padding-bottom: 3rem;
         .row {
             display: flex;
+            @include MediaQuery($sm) {
+                flex-direction: column;
+            }
             .column {
+                @include MediaQuery($sm) {
+                    padding: 1.25rem    ;
+                }
                 flex-basis: calc(100%/3);
                 display: flex;
                 flex-direction: column;
@@ -169,25 +196,42 @@ html {
                 @include general-title($text-base, $color-primary, $font-bold, center);
             }
             h1 {
-                @include general-title($text-4xxl, $color-title, $font-bold, center);
+                @include general-title($text-4xxl, $color-title, $font-semibold, center);
+                @include MediaQuery($sm){
+                    font-size: $text-2xl;
+                }
             }
             span {
-                @include general-span($text-sm, $color-text, 1rem auto, 100%);
+                @include general-span($text-base, $color-text, 1rem auto, 100%);
             }
         }
         .feature__content {
             .row {
                 display: flex;
+                @include MediaQuery($sm){
+                    flex-direction: column;
+                    margin-top: -3rem   ;
+                }
                 .feature__content-left {
                     flex-basis: 50%;
-                    padding-right: 1rem;
+                    padding: 2rem 1rem 0 0;
+                    @include MediaQuery($sm){
+                        overflow: hidden;
+                        margin-top: 1.25rem;
+                    };
                     .content-item {
-                        height: 49.25rem;
+                        @include MediaQuery($sm){
+                            max-height: unset;
+                        };
+                        max-height: 49.25rem;
                         padding: 2rem;
                         border: 1px solid $c1-355;
                         border-radius: 5px;
                         h1 {
                             @include general-title($text-4xl, $color-title, $font-bold, left);
+                            @include MediaQuery($sm){
+                                font-size: $text-2xl;
+                            }
                         }
                         span {
                             @include general-span($text-base, $color-text, 1rem auto, 100%, left);
@@ -197,6 +241,7 @@ html {
                             list-style-type: none;
                             li {
                                 margin: 1rem 0;
+                                font-weight: $font-semibold;
                                i {
                                    padding: 5px;
                                    margin-right: 0.625rem;
@@ -228,10 +273,17 @@ html {
                     }
                 }
                 .feature__content-right {
+                    @include MediaQuery($sm){
+                        overflow: hidden;
+                        margin-top: 1.25rem;
+                    };
                     flex-basis: 50%;
-                    padding-left: 1rem;
+                    padding: 2rem 1rem 0;
                     .content-item {
-                        height: 49.25rem;
+                        @include MediaQuery($sm){
+                            max-height: unset;
+                        };
+                        max-height: 49.25rem;
                         padding: 2rem;
                         border: 1px solid $c1-355;
                         border-radius: 5px;
@@ -245,7 +297,10 @@ html {
                         }
                         h1 {
                             margin-top: 3.57rem;
-                            @include general-title($text-4xxl, $color-title, $font-bold, center);
+                            @include general-title($text-4xxl, $color-title, $font-bold, left);
+                            @include MediaQuery($sm){
+                                font-size: $text-2xl;
+                            }
                         }
                         span {
                             @include general-span($text-base, $color-text, 1rem auto, 100%, left);

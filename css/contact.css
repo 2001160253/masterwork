@@ -436,8 +436,13 @@
   font-size: 20px;
   line-height: 25px;
   color: #2c3038;
+<<<<<<< HEAD
   margin-bottom: 30px;
   font-weight: 500;
+=======
+  font-weight: 700 !important;
+  text-align: left;
+>>>>>>> a5dd31739e79c431971e5b7b735abbc92c85ee90
 }
 
 .footer-home .container .footer__up .footer__col-left .footer__up-item1 p {
@@ -459,8 +464,13 @@
   font-size: 20px;
   line-height: 25px;
   color: #2c3038;
+<<<<<<< HEAD
   margin-bottom: 30px;
   font-weight: 500;
+=======
+  font-weight: 700 !important;
+  text-align: center;
+>>>>>>> a5dd31739e79c431971e5b7b735abbc92c85ee90
 }
 
 .footer-home .container .footer__up .footer__col-right .footer__up-item2 .footer__up-email {

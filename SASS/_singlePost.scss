@@ -22,6 +22,9 @@
             }
             h1 {
                 @include general-title($text-4xxl, $color-title, $font-semibold, left);
+                @include MediaQuery($sm){
+                    font-size: $text-2xl;
+                }
             }
             span {
                 margin-right: 0.625rem;
@@ -46,9 +49,15 @@
            .container-content {
                display: flex;
                align-items: center;
+               @include MediaQuery($sm){
+                flex-direction: column;
+            }
                img {
                    width: calc(100% /3);
                    border-radius: 0.625rem;
+                   @include MediaQuery($sm){
+                       width: 100%;
+                }
                }
                span {
                    padding-left: 1.5rem;
@@ -95,10 +104,14 @@
         .corporate__title {
             h1 {
                 @include general-title($text-4xl, $color-title, $font-semibold, left);
+                @include MediaQuery($sm){
+                    font-size: $text-2xl;
+             }
             }
             p {
                 @include general-span($text-xl, $color-text, 1rem 0, 100%, left);
                 line-height: 1.5625rem;
+                font-style: italic;
             }
             span {
                 @include general-span($text-base, $color-text, 1rem 0, 100%, left);
@@ -111,9 +124,15 @@
                 display: flex;
                 margin-bottom: 5rem;
                 align-items: center;
+                @include MediaQuery($sm){
+                    flex-direction: column;
+             }
                 img {
                     width: calc(100% /3);
                     border-radius: 0.625rem;
+                    @include MediaQuery($sm){
+                        width: 100%;
+                 }
                 }
                 span {
                     padding-left: 1.5rem;
@@ -140,13 +159,26 @@
                     flex-basis: 50%;
                     display: flex;
                     align-items: center;
+                    &:hover{
+                        cursor: pointer;
+                        span {
+                            color: $color-primary;
+                        }
+                    }
                     img {
                         width: 20%;
                         border-radius: 5px;
+                        @include MediaQuery($sm){
+                            display: none;
+                     }
                     }
                     span {
                         @include general-span($text-lg, $color-title, 1rem 0, 100%, left);
                         padding: 0 0.625rem;
+                        transition: all 0.3s;
+                        @include MediaQuery($sm){
+                            font-weight: $font-semibold;
+                     }
                     }
                     .content-item-2 {
                         text-align: right;
@@ -161,23 +193,26 @@
 .comment {
     padding: 3rem 0;
     .row {
-        width: 750px;
+        max-width: 750px;
         margin: 0 auto;
         h1 {
             @include general-title($text-4xl, $color-title, $font-semibold, left);
         }
         .column {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            align-items: left;
             margin: 0.625rem;
             .comment__img {
-                width: 5rem;
-                height: 5rem;
+                width: 80px;
+                height: 80px;
+                display: inline-block;
+                overflow: hidden;
+                border-radius: 50%;
                 img {
                     width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                    object-fit: cover;
+                    min-height: 100%;
+                    object-position: center;
                 }
             }
             .comment__content {
@@ -205,6 +240,9 @@
         }
         .column-padd {
             margin-left: 7.5rem;
+            @include MediaQuery($sm){
+                margin-left: unset;
+         }
         }
     }
 }
@@ -214,11 +252,21 @@
 .related {
     padding: 6rem 0;
     .row {
-        width: 750px;
+        h1 {
+            @include general-title($text-4xl, $color-title, $font-semibold, left);
+        }
+        max-width: 750px;
         margin: 0 auto;
         display: flex;
+        @include MediaQuery($sm){
+            flex-direction: column;
+     }
         .column {
             width: 50%;
+            @include MediaQuery($sm){
+                width: 100%;
+                margin-top: 1.25rem;
+         }
             .related__item {
                 transition: 0.3s ease-in;
                 .related__item-img {
@@ -266,7 +314,7 @@
 
 .reply {
     .row {
-        width: 750px;
+        max-width: 750px;
         margin: 0 auto;
         h1 {
             @include general-title($text-4xl, $color-title, $font-normal, left);
