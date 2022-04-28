@@ -2,7 +2,7 @@
         font-size: $fs;
         color: $c;
         font-weight:$fw !important;
-        text-align: $ta !important;
+        text-align: $ta;
 }
 @mixin general-span($fs, $c, $mg, $w:100%, $ta:center) {
         font-size: $fs;
@@ -44,4 +44,22 @@
         border: $bo;
         color: $c;
         transition: all 0.4s;
+}
+@mixin MediaQuery($type) {
+        @if $type == $xs {
+                @media screen and(max-width: $xs) {
+                        @content;
+                }
+        }
+        @else if $type == $sm {
+                @media screen and(max-width: $sm) {
+                        @content;
+                }
+        }
+        @else{
+                @media screen and(max-width: $md) {
+                        @content;
+                }
+        }
+        
 }

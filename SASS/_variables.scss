@@ -33,6 +33,11 @@ $text-4xxl: 2.875rem; /* 40px */
 $text-5xl: 3rem; /* 48px */
 $text-5xxl: 3.125rem; /* 50px */
 $text-6xl: 3.75rem; /* 60px */
+// do phan giai
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$xl: 1200px;
 
 @mixin button-primary-color {
   border-color: $color-primary;

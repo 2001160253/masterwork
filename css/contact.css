@@ -366,7 +366,7 @@
   font-size: 1.125rem;
   color: #2c3038;
   font-weight: 700 !important;
-  text-align: left !important;
+  text-align: left;
 }
 
 .footer-home .footer__up .footer__up-item1 span {
@@ -396,7 +396,7 @@
   font-size: 1.125rem;
   color: #2c3038;
   font-weight: 700 !important;
-  text-align: center !important;
+  text-align: center;
 }
 
 .footer-home .footer__up .footer__up-item2 .footer__up-email {

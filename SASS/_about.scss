@@ -1,6 +1,15 @@
 
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    }
+    i {
+        font: normal normal normal 14px/1 FontAwesome !important;
+    }
 html {
     font-size: 16px;
+   @include MediaQuery($sm) {
+        font-size: 10px;
+    }
 }
 // About
 
@@ -24,7 +33,7 @@ html {
 
 // About Us
 .about {
-    padding: 5.625rem 0 3.75rem 0;
+    padding: 7.625rem 0 3.75rem 0;
     .container {
         h1 {
             text-align: center;
@@ -34,26 +43,34 @@ html {
             display: flex;
             justify-content: left;
             margin: 2.5rem 0 4rem 0;
+            @include MediaQuery($sm) {
+                flex-direction: column;
+            }
             .about__up-left {
                 flex-basis: 50%;
                 h1 {
-                    @include general-title($text-4xl, $color-title, $font-normal, left);
+                    @include general-title($text-4xxl, $color-title, $font-normal, left);
+                    @include MediaQuery($sm) {
+                        font-size: $text-2xxl;
+                    }
                 }
                 span {
-                    @include general-span($text-sm, $color-text, 1rem 0);
+                    @include general-span($text-base, $color-text, 1rem 0, 100%, left);
                 }
                 ul {
                     padding-left: unset;
                     list-style-type: none;
                     li {
-                        margin-bottom: 0.625rem;
+                        margin-bottom: 0.9375rem;
+                        @include general-title($text-base, $color-title, $font-semibold, left);
                        i {
-                           padding: 5px;
+                           padding: 0.5rem;
                            margin-right: 0.625rem;
                            background-color: $c1-300;
                            border-radius: 50%;
                            color: $color-primary;
-                           font-size: $text-xs;
+                           font-size: 0.625rem !important;
+                           opacity: 0.5;
                        }
                     }
                 }
@@ -69,13 +86,16 @@ html {
             margin: 3rem 0;
             display: flex;
             justify-content: space-between;
+            @include MediaQuery($sm) {
+                flex-direction: column;
+            }
             .about__down-item {
                 flex-basis: 30%;
                 h1 {
                     @include general-title($text-2xxl, $color-title, $font-semibold, left);
                 }
                 span {
-                    @include general-span($text-sm, $color-text, 1rem 0);
+                    @include general-span($text-base, $color-text, 1rem 0, 100%, left);
                 }
             }
         }
@@ -88,90 +108,112 @@ html {
     background-color: $c1;
     .features__title {
         h3 {
-            @include general-title($text-sm, $color-primary, $font-semibold, center);
+            @include general-title($text-lg, $color-primary, $font-semibold, center);
+            
         }
         text-align: center;
         h1 {
-            @include general-title($text-4xl, $color-title, $font-semibold, center);
+            @include general-title($text-4xxl, $color-title, $font-semibold, center);
+            @include MediaQuery($sm) {
+                font-size: $text-2xl;
+            }
         }
         span {
-            @include general-span($text-sm, $color-text, 1rem auto, 60%);
+            @include general-span($text-base, $color-text, 1rem auto, 60%);
+            @include MediaQuery($sm) {
+                width: 100%;
+            }
         }
     }
     .features__content {
         margin-top: 5.625rem;
         .row {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            @include MediaQuery($sm) {
+                flex-direction: row;
+            }
+            @include MediaQuery($xs) {
+                flex-direction: column;
+            }
             .column{
-                flex-basis: 22%;
-                height: 15.625rem;
-                text-align: center;
-                background-color: $color-white;
-                border-radius: 0.625rem;
-                position: relative;
-                .title {
+                width: 25%;
+                @include MediaQuery($sm) {
+                    margin-top: 3.125rem;
+                    width: 50%;
+                }
+                @include MediaQuery($xs) {
                     width: 100%;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    .features__content-icon {
-                        transition: all 0.3s;
-                        margin: 0 auto 1.2rem auto;
-                        width: 3.75rem;
-                        height: 3.75rem;
-                        border-radius: 50%;
-                        background-color: $color-primary;
-                        position: relative;
-                        
-                        i {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            font-size: $text-xl;
-                            color: $color-white;
-                        }
-                    }
-                    h1 {
-                        @include general-title($text-xl, $color-title, $font-semibold, center);
-                    }
                 }
-                .description {
-                    position: absolute;
-                    bottom: 1.25rem;
-                    opacity: 0;
-                    // display: none;
-                    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                    span {
-                        @include general-span($text-sm, $color-text, 1rem 0);
-                    }
-                    a {
-                        @include general-more( $text-lg, $color-primary,  $font-bold, none);
-                        &:hover {
-                            text-decoration: underline;
+                .item {
+                    height: 15.625rem;
+                    text-align: center;
+                    background-color: $color-white;
+                    border-radius: 0.625rem;
+                    position: relative;
+                    .title {
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        .features__content-icon {
+                            transition: all 0.3s;
+                            margin: 0 auto 1.2rem auto;
+                            width: 4.375rem;
+                            height: 4.375rem;
+                            border-radius: 50%;
+                            background-color: $color-primary;
+                            position: relative;
+                            
+                            i {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                font-size: $text-2xl !important;
+                                color: $color-white;
+                            }
                         }
-                    }
-                }
-                &:hover {
-
-                    @for $i from 0 to 2 {
-                        .test-#{$i+1} {
-                            transform: translateY(-5.625rem);
+                        h1 {
+                            @include general-title($text-xl, $color-title, $font-bold, center);
+                            
                         }
                     }
                     .description {
-                        // display: block;
-                        opacity: 1;
-                        animation: zoomIn 0.5s ;
+                        position: absolute;
+                        bottom: 1.25rem;
+                        opacity: 0;
+                        // display: none;
+                        transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                        span {
+                            @include general-span($text-base, $color-text, 1rem 0);
+                        }
+                        a {
+                            @include general-more( $text-lg, $color-primary,  $font-bold, none);
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
-                }
-                @for $i from 0 to 2 {
-                    .test-#{$i+1} {
-                       transition: all 0.4s linear 0.1s*$i;
+                    &:hover {
+    
+                        @for $i from 0 to 2 {
+                            .test-#{$i+1} {
+                                transform: translateY(-5.625rem);
+                            }
+                        }
+                        .description {
+                            // display: block;
+                            opacity: 1;
+                            animation: zoomIn 0.5s ;
+                        }
+                    }
+                    @for $i from 0 to 2 {
+                        .test-#{$i+1} {
+                           transition: all 0.4s linear 0.1s*$i;
+                        }
                     }
                 }
             }
@@ -185,13 +227,19 @@ html {
     .container {
         .intro__title {
             h3 {
-                @include general-title($text-sm, $color-primary, $font-semibold, center);
+                @include general-title($text-base, $color-primary, $font-bold, center);
             }
             h1 {
-                @include general-title($text-4xl, $color-title, $font-normal, center);
+                @include general-title($text-4xxl, $color-title, $font-semibold, center);
+                @include MediaQuery($sm) {
+                    font-size: $text-2xl;
+                }
             }
             span {
-                @include general-span($text-sm, $color-text, 1rem auto, 70%);
+                @include general-span($text-base, $color-text, 1rem auto, 70%);
+                @include MediaQuery($sm) {
+                    width: 100%;
+                }
             }
         }
         .intro__content {
@@ -206,6 +254,9 @@ html {
                     transition: all 0.4s;
                     &:hover {
                         transform: translateY(-1.25rem);
+                    }
+                    @include MediaQuery($sm) {
+                        width: 100%;
                     }
                 }
                 .intro__content-icon {
@@ -231,6 +282,7 @@ html {
 }
 //  Customer
 .customer {
+    padding-bottom: 3rem;
     .owl-carousel
     {
         .owl-item  {
@@ -243,84 +295,109 @@ html {
             }
     
         }
+        .owl-dots{
+            display: none;
+        }
+            
     } 
 }
 
 // Team Member
 .team {
     background-color: $c1;
-    .team__title {
-        width: 60%;
-        margin: 6.25rem auto 3.75rem auto;
-        h3 {
-            @include general-title($text-sm, $color-primary, $font-semibold, center);
-        }
-        h1 {
-            @include general-title($text-4xl, $color-title, $font-normal, center);
-        }
-        span {
-            @include general-span($text-sm, $color-text, 1rem 0);
-        }
-    }
-    .team__content {
-        .row {
-            display: flex;
-            flex-direction: row;
-            .column {
-                width: 100%;
-                flex-basis: 25%;
-                padding-bottom: 3.25rem;
-                transition: all 0.4s;
-                &:hover {
-                    transform: translateY(-1rem);
-                    .team__item {
-                        .team__item-content {
-                            h1 {
-                                color: $color-primary;
-                            }
-                        }
-                    }
+    padding-top: 3rem;
+    .container {
+        .team__title {
+            width: 60%;
+            margin: 6.25rem auto 3.75rem auto;
+            @include MediaQuery($sm) {
+                   width: 100%;
+               }
+            h3 {
+                @include general-title($text-base, $color-primary, $font-bold, center);
+            }
+            h1 {
+                @include general-title($text-4xxl, $color-title, $font-semibold, center);
+                @include MediaQuery($sm) {
+                    font-size: $text-2xl;
                 }
-                .team__item {
-                    height: 25rem;
-                    background-color: $color-white;
-                    display: flex;
+            }
+            span {
+                @include general-span($text-base, $color-text, 1rem auto, 100%);
+            }
+        }
+        .team__content {
+            .row {
+                display: flex;
+                justify-content: space-between;
+               @include MediaQuery($sm) {
+                    flex-direction: row;
+                }
+               @include MediaQuery($xs) {
                     flex-direction: column;
-                    .team__item-img {
-                        height: 70%;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 0.625rem 0.625rem 0 0;
-                            vertical-align: middle;
-                            cursor: pointer;
-                        }
+                }
+                .column {
+                    width: 25%;
+                    padding-bottom: 3.25rem;
+                   @include MediaQuery($sm) {
+                        width: 50%;
                     }
-                    .team__item-content {
-                        padding: 16px;
-                        background: #fff;
-                        border-radius: 0 0 6px 6px;
-                        border: 1px solid #eee;
-                        border-top: none;
-                        // margin-top: -6px;
-                        height: 30%;
-                        h1 {
-                            @include general-title($text-xl, $color-title, $font-bold, left);
+                   @include MediaQuery($xs) {
+                        width: 100%;
+                    }
+                    .team__item {
+                        height: 25rem;
+                        background-color: $color-white;
+                        display: flex;
+                        flex-direction: column;
+                        transition: all 0.4s;
+                        overflow: hidden;
+                        &:hover {
+                            transform: translateY(-1rem);
+                            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+                           .team__item-content {
+                               h1 {
+                                color: $color-primary;
+                               }
+                           }
                         }
-                        span {
-                            @include general-span($text-sm, $color-text, 5px 0, 100%, left);
-                        }
-                        .item__logo {
-                           .item__logo-fb {
-                                @include general-icon(1.5rem, 1.5rem, #3B5998, $color-white, 1rem);
+                        .team__item-img {
+                            height: 70%;
+                            img {
+                                width: 100%;
+                                min-height: 100%;
+                                border-radius: 0.625rem 0.625rem 0 0;
+                                vertical-align: middle;
+                                cursor: pointer;
                             }
-                           .item__logo-tw {
-                                @include general-icon(1.5rem, 1.5rem, #1DA1F2, $color-white, 1rem);
+                        }
+                        .team__item-content {
+                            padding: 16px;
+                            background: #fff;
+                            border-radius: 0 0 6px 6px;
+                            border: 1px solid #eee;
+                            border-top: none;
+                            // margin-top: -6px;
+                            height: 30%;
+                            h1 {
+                                @include general-title($text-xl, $color-title, $font-bold, left);
+                            }
+                            span {
+                                @include general-span($text-base, $color-text, 5px 0, 100%, left);
+                            }
+                            .item__logo {
+                               .item__logo-fb {
+                                    @include general-icon(1.5rem, 1.5rem, #3B5998, $color-white, 1rem);
+                                }
+                               .item__logo-tw {
+                                    @include general-icon(1.5rem, 1.5rem, #1DA1F2, $color-white, 1rem);
+                                }
                             }
                         }
                     }
                 }
             }
+    
         }
 
     }
@@ -333,11 +410,17 @@ html {
     .build__title {
         width: 60%;
         margin: 6.25rem auto 3.75rem auto;
+       @include MediaQuery($sm) {
+            width: 100%;
+        }
         h1 {
-            @include general-title($text-4xl, $color-title, $font-normal, center);
+            @include general-title($text-4xxl, $color-title, $font-semibold, center);
+           @include MediaQuery($sm) {
+                font-size: $text-2xl;
+            }
         }
         span {
-            @include general-span($text-sm, $color-text, 1rem 0);
+            @include general-span($text-base, $color-text, 1rem 0);
         }
     }
     .build__btn {
@@ -368,25 +451,43 @@ html {
         border-bottom: 1px solid $c1-350;
         display: flex;
         justify-content: space-between;
+       @include MediaQuery($sm) {
+            flex-direction: column;
+        }
         .footer__up-item1 {
-            flex: 1;
-            h1 {
-                @include general-title($text-lg, $color-title, $font-bold, left);
+            width: 50%;
+            flex: unset !important;
+            display: flex;
+            justify-content: space-between;
+           @include MediaQuery($sm) {
+                width: 100%;
             }
-            span {
-                @include general-span($text-sm, $color-text, 1rem 0, 100%, left);
-                transition: all 0.4s;
-                cursor: pointer;
-                &:hover {
-                    color: $color-primary;
+           @include MediaQuery($xs) {
+                flex-direction: column;
+            }
+            .item{
+                h1 {
+                    @include general-title($text-2xl, $color-title, $font-semibold, left);
+                }
+                span {
+                    @include general-span($text-base, $color-text, 1rem 0, 100%, left);
+                    font-size: $text-base !important;
+                    transition: all 0.4s;
+                    cursor: pointer;
+                    &:hover {
+                        color: $color-primary;
+                    }
                 }
             }
         }
         .footer__up-item2 {
             margin-left: 6rem;
-            flex: 3;
+            @include MediaQuery($sm) {
+                margin-left: unset  !important;
+            }
             h1 {
-                @include general-title($text-lg, $color-title, $font-bold, center);
+                @include general-title($text-xl, $color-title, $font-bold, left);
+                text-align: left !important;
             }
             .footer__up-email {
                 padding: 2rem;
@@ -395,9 +496,13 @@ html {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                p {
+                    @include general-span($text-lg, $color-text, 1rem 0, 100%, left);
+                }
                 input {
                     padding: 0.625rem 7rem 0.625rem 0.625rem;
-                    font-size: $text-sm;
+                    font-size: $text-base !important;
+                    font-weight: $font-semibold;
                     border-radius: 5px;
                     border: none;
                     background-color: $c1;
@@ -405,12 +510,14 @@ html {
                 }
                 a {
                     button {
-                        @include general-btn(0.625rem 1.875rem, 0.25rem, $color-primary,  $color-white);
+                        @include general-btn(0.625rem 1.8rem, 0.25rem, $color-primary,  $color-white);
+                        padding: 0.625rem 1.8rem !important;
                         display: inline;
                     }
                 }
                 span {
-                    @include general-span($text-sm, $color-text, 1rem 0 0 0, 100%, left);
+                    @include general-span($text-base, $color-text, 1rem 0 0 0, 100%, left);
+                    font-size: $text-base !important;
                 }
             }
         }
@@ -419,6 +526,10 @@ html {
         padding: 2.5rem 0;
         display: flex;
         justify-content: space-between;
+        @include MediaQuery($sm) {
+            flex-direction: column;
+            text-align: center;
+        }
         .footer__down-content {
             span {
                 @include general-span($text-sm, $color-text, 1rem 0);
@@ -452,6 +563,12 @@ html {
     background-color: $c2;
     color: $c2-50;
     border-bottom-left-radius: 0.625rem;
+   @include MediaQuery($sm) {
+        display: none;
+    }
+   @include MediaQuery($xl) {
+        display: none;
+    }
     span {
         padding: 1rem 1rem;
         &:first-child {
@@ -466,4 +583,33 @@ html {
             color: $color-white;
         }
     }
+}
+
+// Nav-toggle
+.header {
+    .logo {
+        i {
+            font-size: $text-3xl !important;
+        }
+    }
+    .nav-toggle {
+        background-color: transparent;
+        border: none;
+        display: none;
+        i {
+            font-size: 1.875rem !important;
+        }
+        @include MediaQuery($sm) {
+            display: block;
+        }
+        @include MediaQuery($xs) {
+        }
+    }
+   .menu {
+       @include MediaQuery($sm) {
+           display: none;
+       }
+       @include MediaQuery($xs) {
+       }
+   }
 }
