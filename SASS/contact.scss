@@ -195,6 +195,9 @@
             .col-img {
               text-align: right;
 
+              img {
+                padding-top: 50px;
+              }
             }
 
             .col-lg-6 {
@@ -542,3 +545,6 @@
     }
   }
 }
+
+//-------------------------------------------------------------------------------
+@import "./responsive/contact__responsive";
