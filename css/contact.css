@@ -217,6 +217,10 @@
   text-align: right;
 }
 
+.contactus .container .row .col .contact-us-main .us-content .col-img img {
+  padding-top: 50px;
+}
+
 .contactus .container .row .col .contact-us-main .us-content .col-lg-6 {
   padding: 0;
 }
@@ -577,5 +581,165 @@
 .footer-home .container .footer__down .footer__down-icon a:hover {
   cursor: pointer;
   color: #dc4f72;
+}
+
+@media (max-width: 1819px) {
+  .header {
+    background-color: gray;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .header {
+    background-color: yellow;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header {
+    background-color: red;
+    height: 70px !important;
+  }
+  .contactus .container {
+    padding-top: 20px;
+  }
+  .contactus .container .row-us {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactus .container .row-us .col-img {
+    margin-bottom: 40px;
+  }
+  .contactus .container .row-us .col-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    background-color: palevioletred;
+  }
+  .header {
+    height: 70px;
+  }
+  .header .menu {
+    display: none;
+  }
+  .header .menu-mobile {
+    display: block !important;
+  }
+  .contactus .us-content .col-img img {
+    padding: 0 !important;
+  }
+  .contactus .us-content .form-header h3 {
+    font-size: 35px !important;
+    margin-bottom: 20px !important;
+  }
+  .touch .touch-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .touch .touch-bottom .col {
+    width: 50%;
+  }
+  .footer-home .footer__col-right {
+    margin-top: 40px;
+  }
+  .footer-home .footer__col-right .footer__up-email {
+    max-width: 100% !important;
+  }
+  .footer-home .footer__col-right .footer__up-email form {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    background-color: orange;
+  }
+  .contactus .col-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactus .contact-form .form-header .mobile-h3 {
+    font-size: 26px !important;
+    margin-bottom: 20px !important;
+  }
+  .footer-home .footer__up .footer__col-left .footer__up-item1 {
+    margin-bottom: 20px;
+  }
+  .footer-home .footer__up .footer__col-left .footer__up-item1 h3 {
+    margin-bottom: 15px !important;
+  }
+  .footer-home .footer__down {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    background-color: blueviolet;
+  }
+  .touch .mobile__touch-top--h3 {
+    font-size: 30px !important;
+  }
+  .touch .mobile__touch-top--p {
+    text-align: justify !important;
+  }
+  .touch .mobile__touch-col {
+    width: 80% !important;
+    padding: 16px !important;
+  }
+  .touch .mobile__touch-col .contact-detail h4 {
+    font-size: 18px !important;
+    margin-top: 10px;
+  }
+  .touch .mobile__touch-col .contact-detail .mobile__contact-detail--a {
+    font-size: 15px !important;
+  }
+  .touch .mobile__touch-col .contact-detail .mobile__contact-detail--p {
+    font-size: 15px !important;
+    text-align: left !important;
+  }
+  .footer-home .mobile__footer__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-home .mobile__footer__down-content--p {
+    text-align: center !important;
+  }
+  .footer-home .footer__up-item2 h3 {
+    margin-bottom: 10px !important;
+  }
+  .footer-home .mobile__footer__form {
+    padding: 16px !important;
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 319px) {
+  .header {
+    background-color: seagreen;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

@@ -602,38 +602,6 @@ html {
     }
 }
 
-// Nav-toggle
-.header {
-    .logo {
-        i {
-            font-size: $text-3xl !important;
-        }
-    }
-    .nav-toggle {
-        background-color: transparent;
-        border: none;
-        display: none;
-        i {
-            font-size: 1.875rem !important;
-        }
-        @include MediaQuery($sm) {
-            display: block;
-        }
-        @include MediaQuery($xs) {
-        }
-    }
-   .menu {
-       @include MediaQuery($sm) {
-           display: none;
-       }
-       @include MediaQuery($xs) {
-       }
-   }
-}
-
-
-
-
 @keyframes ripple {
   from {
     opacity: 1;
