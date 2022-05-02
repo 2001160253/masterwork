@@ -77,8 +77,13 @@ html {
             }
             .about__up-right {
                 flex-basis: 50%;
+                transition: all 0.4s;
+                &:hover {
+                    transform: translateY(-1.25rem);
+                }
                 img {
                     width: 100%;
+                    border-radius: 5px;
                 }
             }
         }
@@ -264,8 +269,20 @@ html {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
+                    transition: all 0.3s;
                     a {
+                        // position: relative;
+                        display: block;
+                        &::after {
+                            @include rings(2s, 0.5s);
+                          }
+                          
+                          &::before {
+                            @include rings(2s, 1s);
+                          }
+                      
                         @include general-icon(3rem, 3rem, $color-white, $color-primary, 1rem);
+                       
                     }
                 }
             }
@@ -350,26 +367,27 @@ html {
                         background-color: $color-white;
                         display: flex;
                         flex-direction: column;
-                        transition: all 0.4s;
                         overflow: hidden;
+                        transition: all 0.5s;
                         &:hover {
-                            transform: translateY(-1rem);
-                            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
-                           .team__item-content {
-                               h1 {
-                                color: $color-primary;
-                               }
-                           }
+                            transform: translateY(-0.625rem);
+                            .team__item-content {
+                                h1 {
+                                    color: $color-primary;
+                                }
+                            }
                         }
                         .team__item-img {
                             height: 70%;
                             img {
                                 width: 100%;
-                                min-height: 100%;
                                 border-radius: 0.625rem 0.625rem 0 0;
                                 vertical-align: middle;
                                 cursor: pointer;
+                                object-fit: cover;
+                                object-position: center;
                             }
+                            transition: all 1s;
                         }
                         .team__item-content {
                             padding: 16px;
@@ -377,7 +395,6 @@ html {
                             border-radius: 0 0 6px 6px;
                             border: 1px solid #eee;
                             border-top: none;
-                            // margin-top: -6px;
                             height: 30%;
                             h1 {
                                 @include general-title($text-xl, $color-title, $font-bold, left);
@@ -585,31 +602,15 @@ html {
     }
 }
 
-// Nav-toggle
-.header {
-    .logo {
-        i {
-            font-size: $text-3xl !important;
-        }
-    }
-    .nav-toggle {
-        background-color: transparent;
-        border: none;
-        display: none;
-        i {
-            font-size: 1.875rem !important;
-        }
-        @include MediaQuery($sm) {
-            display: block;
-        }
-        @include MediaQuery($xs) {
-        }
-    }
-   .menu {
-       @include MediaQuery($sm) {
-           display: none;
-       }
-       @include MediaQuery($xs) {
-       }
-   }
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75,0.75,1);
+  }
+  
+  to {
+    opacity: 0;
+    transform: scale3d(1.5,1.5,1);
+  }
 }
+
