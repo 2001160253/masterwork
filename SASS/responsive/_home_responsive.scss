@@ -85,6 +85,67 @@
 
         .menu-mobile {
             display: block !important;
+            border-radius: 5px;
+            width: 36px;
+            height: 36px;
+            background-color: yellowgreen;
+            text-align: center;
+            line-height: 36px;
+            cursor: pointer;
+
+            .icon-toggle {
+                color: #fff;
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .menu-mobile__toggle {
+                position: fixed;
+                top: 70px;
+                right: 0;
+                left: 0;
+                background-color: $color-white;
+                height: 350px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+                flex-direction: column;
+                padding: 0;
+                transform: translateY(-150%);
+                transition: all 0.2s linear;
+                padding-bottom: 30px;
+
+
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $color-text;
+                    }
+                }
+
+                .mobile-btn {
+                    margin: auto;
+                    width: 196px;
+                    height: 54px;
+                    border-color: $color-primary;
+                    color: $color-primary;
+                    font-size: 14px;
+                    font-weight: $font-semibold;
+                }
+            }
+
+            .is-show {
+                transition: all 0.2s linear;
+                transform: translateY(0);
+                display: none;
+            }
+
+            .active {
+                a {
+                    color: $color-primary !important;
+                }
+            }
         }
     }
 
@@ -178,6 +239,10 @@
     .header {
         background-color: rgb(236, 121, 190);
         height: 60px !important;
+
+        .menu-mobile__toggle {
+            top: 60px !important;
+        }
     }
 
     .execute {
