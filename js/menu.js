@@ -10,3 +10,4 @@ function handleToggleMenu(event) {
     menu.classList.toggle("is-show");
     menuMobile.classList.toggle("is-show");
 }
+
