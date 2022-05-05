@@ -21,6 +21,9 @@
       font-weight: $font-bold;
       letter-spacing: -1px;
       text-decoration: none;
+      .icon-header {
+        font-size: 24px !important;
+      }
     }
 
     .menu {
@@ -274,7 +277,7 @@
 
 .about {
   padding: 48px 0;
-  background-color: #F7F9FC;
+  background-color: #f7f9fc;
 
   .container {
     max-width: 1200px;
@@ -381,9 +384,11 @@
 }
 
 .weare {
-  background-image: linear-gradient(to right,
+  background-image: linear-gradient(
+      to right,
       rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.33)),
+      rgba(0, 0, 0, 0.33)
+    ),
     url(../images/bg.jpg);
   background-size: cover;
   background-position: center;
@@ -585,6 +590,44 @@
         }
       }
     }
+    .blog-pagination {
+      margin-top: 48px;
+      height: 38px;
+      ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        li {
+          list-style-type: none;
+          margin: 0 5px;
+          .blog-pagination-active {
+            border: 1px solid $color-primary;
+            color: $color-primary;
+          }
+          a {
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 16px;
+            color: $color-text;
+            font-weight: $font-semibold;
+            border-radius: 6px;
+            border: 1px solid $color-bg-light;
+            transition: 0.3s ease-in-out;
+            box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
+            &:hover {
+              border: 1px solid $color-primary;
+            }
+            i {
+              font-size: 14px;
+              padding-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -700,7 +743,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom: 3px solid #eee;
+            border-bottom: 1px solid #eee;
 
             button {
               border: none;
@@ -718,6 +761,10 @@
               }
             }
           }
+        }
+        .nav {
+          border-bottom: 0;
+          border-bottom: 1px solid #dee2e6;
         }
 
         .tab-project {
@@ -775,9 +822,11 @@
 }
 
 .client {
-  background-image: linear-gradient(to right,
+  background-image: linear-gradient(
+      to right,
       rgba(247, 249, 252, 0.77),
-      rgba(247, 249, 252, 0.77)),
+      rgba(247, 249, 252, 0.77)
+    ),
     url(../images/b2.jpg);
   background-position: center center;
   background-size: cover;
@@ -787,6 +836,7 @@
   .container {
     max-width: 1200px;
     padding: 48px 25px;
+
     padding-top: 31px;
 
     .row {
@@ -809,6 +859,7 @@
       .col {
         div {
           .container {
+            padding-bottom: 0;
             .client-owl {
               .wrapper {
                 padding: 32px;
@@ -850,6 +901,29 @@
                   }
                 }
               }
+              .owl-dots {
+                justify-content: center;
+                display: flex;
+                margin-top: 30px;
+                // width: 100px;
+                .active {
+                  background-color: $color-primary;
+                }
+                button {
+                  width: 40px;
+                  height: 5px;
+                  margin: 5px 7px;
+                  background: $color-white;
+                  display: block;
+                  border: none;
+
+                  transition: opacity 0.2s ease;
+                  border-radius: 0;
+                  span {
+                    display: none;
+                  }
+                }
+              }
             }
           }
         }
@@ -885,6 +959,7 @@
             font-weight: $font-normal;
             width: 750px;
             margin: 16px auto;
+            margin-top: 25px;
           }
 
           .buttons-ready {
@@ -932,7 +1007,6 @@
     padding: 0 25px;
 
     .footer__up {
-
       .footer__col-left {
         .footer__up-item1 {
           h3 {
@@ -975,6 +1049,7 @@
             height: 226px;
             background-color: $color-white;
             padding: 32px;
+            box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
 
             h4 {
               font-size: 18px;
@@ -1082,4 +1157,4 @@
 }
 
 //-------------------------------------------------------------------------------
-@import "./responsive/home_responsive"
+@import "./responsive/home_responsive";

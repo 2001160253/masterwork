@@ -176,8 +176,13 @@
   margin-right: 5px;
 }
 
+.breadcrumbs i {
+  font-size: 8px;
+}
+
 .breadcrumbs span {
   margin-left: 5px;
+  padding-top: 10px;
 }
 
 .breadcrumbs .container {
@@ -301,6 +306,7 @@
   background-color: #dc4f72;
   color: #fff;
   border: none;
+  font-weight: 500;
 }
 
 .contactus .container .row .col .contact-us-main .us-content .col-lg-6 .contact-form .form-btn a:hover {
@@ -422,6 +428,10 @@
   text-decoration: none;
 }
 
+.touch .container .touch-bottom .col .contact-info .contact-detail p a:hover {
+  color: #dc4f72;
+}
+
 .contact-map .contatiner-fluid iframe {
   width: 100%;
 }
@@ -472,6 +482,8 @@
   height: 226px;
   background-color: #fff;
   padding: 32px;
+  -webkit-box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
+          box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
 }
 
 .footer-home .container .footer__up .footer__col-right .footer__up-item2 .footer__up-email h4 {
@@ -583,21 +595,8 @@
   color: #dc4f72;
 }
 
-@media (max-width: 1819px) {
-  .header {
-    background-color: gray;
-  }
-}
-
-@media (max-width: 1399.98px) {
-  .header {
-    background-color: yellow;
-  }
-}
-
 @media (max-width: 1199.98px) {
   .header {
-    background-color: red;
     height: 70px !important;
   }
   .contactus .container {
@@ -622,9 +621,6 @@
 
 @media (max-width: 991.98px) {
   .header {
-    background-color: palevioletred;
-  }
-  .header {
     height: 70px;
   }
   .header .menu {
@@ -635,7 +631,7 @@
     border-radius: 5px;
     width: 36px;
     height: 36px;
-    background-color: yellowgreen;
+    background-color: #dc4f72;
     text-align: center;
     line-height: 36px;
     cursor: pointer;
@@ -722,9 +718,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .header {
-    background-color: orange;
-  }
   .contactus .col-img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -751,9 +744,6 @@
 }
 
 @media (max-width: 575.98px) {
-  .header {
-    background-color: blueviolet;
-  }
   .touch .mobile__touch-top--h3 {
     font-size: 30px !important;
   }
@@ -792,12 +782,6 @@
   .footer-home .mobile__footer__form {
     padding: 16px !important;
     height: 250px !important;
-  }
-}
-
-@media (max-width: 319px) {
-  .header {
-    background-color: seagreen;
   }
 }
 /*# sourceMappingURL=contact.css.map */
