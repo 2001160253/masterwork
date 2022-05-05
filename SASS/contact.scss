@@ -153,8 +153,12 @@
     margin-right: 5px;
   }
 
+  i {
+    font-size: 8px;
+  }
   span {
     margin-left: 5px;
+    padding-top: 10px;
   }
 
   .container {
@@ -232,7 +236,6 @@
                 }
 
                 .main-input {
-
                   textarea,
                   .contact-input {
                     outline: none;
@@ -269,6 +272,7 @@
                     background-color: $color-primary;
                     color: $color-white;
                     border: none;
+                    font-weight: $font-semibold;
 
                     &:hover {
                       background-color: #d62f58;
@@ -370,6 +374,9 @@
                 line-height: 28px;
                 font-weight: $font-semibold;
                 text-decoration: none;
+                &:hover {
+                  color: $color-primary;
+                }
               }
             }
           }
@@ -398,7 +405,6 @@
     padding: 0 25px;
 
     .footer__up {
-
       .footer__col-left {
         .footer__up-item1 {
           h3 {
@@ -441,6 +447,7 @@
             height: 226px;
             background-color: $color-white;
             padding: 32px;
+            box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
 
             h4 {
               font-size: 18px;

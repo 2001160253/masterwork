@@ -35,6 +35,10 @@
   text-decoration: none;
 }
 
+.header .container .logo .icon-header {
+  font-size: 24px !important;
+}
+
 .header .container .menu ul {
   list-style-type: none;
   width: 648px;
@@ -295,7 +299,7 @@
 
 .about {
   padding: 48px 0;
-  background-color: #F7F9FC;
+  background-color: #f7f9fc;
 }
 
 .about .container {
@@ -601,6 +605,59 @@
   transition: all 0.3s ease-in;
 }
 
+.blog .container .blog-pagination {
+  margin-top: 48px;
+  height: 38px;
+}
+
+.blog .container .blog-pagination ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.blog .container .blog-pagination ul li {
+  list-style-type: none;
+  margin: 0 5px;
+}
+
+.blog .container .blog-pagination ul li .blog-pagination-active {
+  border: 1px solid #dc4f72;
+  color: #dc4f72;
+}
+
+.blog .container .blog-pagination ul li a {
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #5a5a5a;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid #f7f9fc;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
+          box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
+}
+
+.blog .container .blog-pagination ul li a:hover {
+  border: 1px solid #dc4f72;
+}
+
+.blog .container .blog-pagination ul li a i {
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
 .general {
   background-color: #f7f9fc;
   padding: 48px 0;
@@ -752,7 +809,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 3px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .complete .container .row-bottom .col-10 ul li button {
@@ -769,6 +826,11 @@
 
 .complete .container .row-bottom .col-10 ul li:focus-within button {
   color: #dc4f72;
+}
+
+.complete .container .row-bottom .col-10 .nav {
+  border-bottom: 0;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .complete .container .row-bottom .col-10 .tab-project .tab-pane .row {
@@ -876,6 +938,10 @@
   margin: 16px auto;
 }
 
+.client .container .row .col div .container {
+  padding-bottom: 0;
+}
+
 .client .container .row .col div .container .client-owl .wrapper {
   padding: 32px;
   background-color: #fff;
@@ -917,6 +983,36 @@
   color: #5a5a5a;
 }
 
+.client .container .row .col div .container .client-owl .owl-dots {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+.client .container .row .col div .container .client-owl .owl-dots .active {
+  background-color: #dc4f72;
+}
+
+.client .container .row .col div .container .client-owl .owl-dots button {
+  width: 40px;
+  height: 5px;
+  margin: 5px 7px;
+  background: #fff;
+  display: block;
+  border: none;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  border-radius: 0;
+}
+
+.client .container .row .col div .container .client-owl .owl-dots button span {
+  display: none;
+}
+
 .ready {
   padding: 48px 0;
   background-color: #fff;
@@ -943,6 +1039,7 @@
   font-weight: 400;
   width: 750px;
   margin: 16px auto;
+  margin-top: 25px;
 }
 
 .ready .container .row .col div .buttons-ready {
@@ -1039,6 +1136,8 @@
   height: 226px;
   background-color: #fff;
   padding: 32px;
+  -webkit-box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
+          box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
 }
 
 .footer-home .container .footer__up .footer__col-right .footer__up-item2 .footer__up-email h4 {
@@ -1150,21 +1249,8 @@
   color: #dc4f72;
 }
 
-@media (max-width: 1819px) {
-  .header {
-    background-color: pink;
-  }
-}
-
-@media (max-width: 1399.98px) {
-  .header {
-    background-color: #008000;
-  }
-}
-
 @media (max-width: 1199.98px) {
   .header {
-    background-color: yellow;
     height: 70px !important;
   }
   .client .owl-item {
@@ -1218,9 +1304,6 @@
 }
 
 @media (max-width: 991.98px) {
-  .header {
-    background-color: red;
-  }
   .header .menu {
     display: none !important;
   }
@@ -1229,7 +1312,7 @@
     border-radius: 5px;
     width: 36px;
     height: 36px;
-    background-color: yellowgreen;
+    background-color: #dc4f72;
     text-align: center;
     line-height: 36px;
     cursor: pointer;
@@ -1354,7 +1437,6 @@
 
 @media (max-width: 767.98px) {
   .header {
-    background-color: #ec79be;
     height: 60px !important;
   }
   .header .menu-mobile__toggle {
@@ -1402,11 +1484,21 @@
     max-width: 100% !important;
     padding: 0 20px !important;
   }
-  .complete {
-    display: none;
-  }
   .complete .header-complete h3 {
     font-size: 32px !important;
+  }
+  .complete .col-10 .nav {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    border: none !important;
+  }
+  .complete .col-10 .tab-content .col-md-6:last-child {
+    margin-top: 30px;
   }
   .client .title-client h3 {
     font-size: 32px !important;
@@ -1431,9 +1523,6 @@
 }
 
 @media (max-width: 575.98px) {
-  .header {
-    background-color: blueviolet;
-  }
   .execute .mobile-excute-content h1 {
     font-size: 35px !important;
     line-height: 1.3 !important;
@@ -1471,6 +1560,9 @@
   .blog .row-bottom .col-4 {
     width: 100% !important;
   }
+  .blog .blog-pagination .mobile-pagi {
+    display: none;
+  }
   .general .row-bottom .col-padding {
     width: 100% !important;
   }
@@ -1507,12 +1599,6 @@
   .footer-home .mobile__footer__form {
     padding: 16px !important;
     height: 250px !important;
-  }
-}
-
-@media (max-width: 319px) {
-  .header {
-    background-color: yellowgreen;
   }
 }
 /*# sourceMappingURL=home.css.map */
