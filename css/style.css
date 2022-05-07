@@ -1620,7 +1620,11 @@
 }
 
 i {
-  font: normal normal normal 24px/1 FontAwesome !important;
+  font: normal normal normal 16px/1 FontAwesome !important;
+}
+
+.breadcrumbs i {
+  font-size: 8px !important;
 }
 
 html {
