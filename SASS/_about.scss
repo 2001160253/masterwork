@@ -18,21 +18,31 @@ html {
 
 // about breadcrumbs
 .breadcrumbs {
-    position: relative;
-    top: 90px;
+    margin-top: 90px;
     font-size: $text-sm;
     font-weight: $font-normal;
     padding: 0.875rem;
     background-color: $c1;
+  
     a {
-        text-decoration: none;
-        color: $color-primary;
-        margin-right: 5px;
+      text-decoration: none;
+      color: $color-primary;
+      margin-right: 5px;
+    }
+  
+    i {
+      font-size: 8px;
     }
     span {
-        margin-left: 5px;
+      margin-left: 5px;
+      padding-top: 10px;
     }
-}
+  
+    .container {
+      max-width: 1200px;
+      padding: 0 25px;
+    }
+  }
 
 // About Us
 .about {
