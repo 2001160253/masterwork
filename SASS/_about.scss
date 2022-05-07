@@ -3,7 +3,10 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
     }
     i {
-        font: normal normal normal 24px/1 FontAwesome !important;
+        font: normal normal normal 16px/1 FontAwesome !important;
+    }
+    .breadcrumbs i {
+        font-size: 8px !important;
     }
 html {
     font-size: 16px;
