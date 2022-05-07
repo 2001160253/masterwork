@@ -1638,8 +1638,7 @@ html {
 }
 
 .breadcrumbs {
-  position: relative;
-  top: 90px;
+  margin-top: 90px;
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0.875rem;
@@ -1652,8 +1651,18 @@ html {
   margin-right: 5px;
 }
 
+.breadcrumbs i {
+  font-size: 8px;
+}
+
 .breadcrumbs span {
   margin-left: 5px;
+  padding-top: 10px;
+}
+
+.breadcrumbs .container {
+  max-width: 1200px;
+  padding: 0 25px;
 }
 
 .about {
