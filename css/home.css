@@ -84,7 +84,7 @@
 }
 
 .header .container .menu ul li .menu-down i {
-  font-size: 12px;
+  font-size: 12px !important;
   padding-left: 4px;
 }
 
