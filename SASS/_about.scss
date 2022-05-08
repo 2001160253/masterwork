@@ -56,6 +56,7 @@ html {
       display: flex;
       justify-content: left;
       margin: 2.5rem 0 4rem 0;
+      margin-top: 3.5rem; //fix
       @include MediaQuery($sm) {
         flex-direction: column;
       }
@@ -364,6 +365,7 @@ html {
     .team__title {
       width: 60%;
       margin: 6.25rem auto 3.75rem auto;
+      margin-top: 30px; //fix
       @include MediaQuery($sm) {
         width: 100%;
       }
@@ -490,6 +492,7 @@ html {
   .build__title {
     width: 60%;
     margin: 6.25rem auto 3.75rem auto;
+    margin-top: 56px; //fix
     @include MediaQuery($sm) {
       width: 100%;
     }
@@ -703,6 +706,7 @@ html {
 .about {
   background-color: #fff;
   padding-top: 35px;
+  padding-bottom: 0;
   .about__up-left {
     ul {
       li {
@@ -711,5 +715,10 @@ html {
         }
       }
     }
+  }
+}
+.team {
+  .team__title {
+    margin-top: 30px;
   }
 }

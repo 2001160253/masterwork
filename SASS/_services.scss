@@ -2,400 +2,449 @@
 
 // About Services
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 .services {
-    margin-top: 10.25rem;
-    padding-bottom: 3rem;
-    .services__title {
-        margin-bottom: 3rem;
-        h1 {
-            @include general-title($text-4xxl, $color-title, $font-bold, center);
-        }
+  // margin-top: 10.25rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem; //fix
+  .services__title {
+    margin-bottom: 3rem;
+    h1 {
+      @include general-title($text-4xxl, $color-title, $font-bold, center);
     }
-    .services__content {
+  }
+  .services__content {
+    display: flex;
+    @include MediaQuery($sm) {
+      flex-direction: column;
+    }
+    .services__left {
+      padding: 0 1rem;
+      flex-basis: 50%;
+      h1 {
+        @include general-title($text-4xxl, $color-title, $font-normal, left);
+      }
+      span {
+        &:nth-of-type(1) {
+          @include general-span($text-2xl, $c2-40, 1.5rem 0, 100%, left);
+        }
+        &:nth-of-type(2) {
+          @include general-span($text-base, $c2-40, 0 0 1.5rem 0, 100%, left);
+        }
+      }
+      a {
+        button {
+          @include general-btn(
+            0.625rem 1.875rem,
+            0.25rem,
+            $color-primary,
+            $color-white
+          );
+          &:hover {
+            background-color: $c1-400;
+          }
+        }
+      }
+    }
+    .services__right {
+      flex-basis: 50%;
+      .row {
         display: flex;
-        @include MediaQuery($sm){
-            flex-direction: column;
+        @include MediaQuery($sm) {
+          flex-direction: row;
         }
-        .services__left {
-            padding: 0 1rem;
-            flex-basis: 50%;
+        @include MediaQuery($xs) {
+          flex-direction: column;
+        }
+        .column {
+          flex-basis: 50%;
+          padding: 0 1.875rem;
+          &:nth-of-type(3) {
+            margin-top: 3rem;
+          }
+          &:nth-of-type(4) {
+            margin-top: 3rem;
+          }
+          @include MediaQuery($sm) {
+            margin-top: 1rem;
+          }
+          .title-logo {
+            .img-icon {
+              position: relative;
+              width: 5rem;
+              height: 5rem;
+              border-radius: 50%;
+              background-color: $c1;
+              display: block;
+              img {
+                @include MediaQuery($xs) {
+                  width: 100%;
+                  padding-right: 0.625rem;
+                }
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
             h1 {
-                @include general-title($text-4xxl, $color-title, $font-normal, left);
+              a {
+                @include general-title($text-xl, unset, $font-bold, left);
+                text-decoration: none;
+              }
             }
-            span {
-                &:nth-of-type(1) {
-                    @include general-span($text-2xl, $c2-40, 1.5rem 0, 100%, left);
-                }
-                &:nth-of-type(2) {
-                    @include general-span($text-base, $c2-40, 0 0 1.5rem 0, 100%, left);
-                }
-            }
-            a {
-                button {
-                    @include general-btn(0.625rem 1.875rem, 0.25rem, $color-primary,  $color-white);
-                    &:hover {
-                        background-color: $c1-400;
-                    }
-                }
-            }
+          }
+          span {
+            @include general-span($text-base, $color-text, 0 0, 100%, left);
+          }
         }
-        .services__right {
-            flex-basis: 50%;
-            .row {
-                display: flex;
-                @include MediaQuery($sm){
-                    flex-direction: row;
-                }
-                @include MediaQuery($xs){
-                    flex-direction: column;
-                }
-                .column {
-                    flex-basis: 50%;
-                    padding: 0 1.875rem;
-                    &:nth-of-type(3) {
-                        margin-top: 3rem;
-                    }
-                    &:nth-of-type(4) {
-                        margin-top: 3rem;
-                    }
-                    @include MediaQuery($sm) {
-                        margin-top: 1rem;
-                    }
-                    .title-logo {
-                        .img-icon {
-                            position: relative;
-                            width: 5rem;
-                            height: 5rem;
-                            border-radius: 50%;
-                            background-color: $c1;
-                            display: block;
-                            img {
-                             @include MediaQuery($xs){
-                                width: 100%;
-                                padding-right: 0.625rem;
-                                }
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                transform: translate(-50%, -50%);
-                            }
-                        }
-                        h1 {
-                            a {
-                                @include general-title($text-xl, unset, $font-bold, left);
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                    span {
-                        @include general-span($text-base, $color-text, 0 0, 100%, left);
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 // Product best
 
 .product {
-    padding-top: 3rem;
-    background-color: $c1;
-    .product__title {
-        padding: 1rem 0 3rem 0;
-        max-width: 750px;
-        margin: auto;
-        h3 {
-            @include general-title($text-base, $color-primary, $font-bold, center);
-        }
-        h1 {
-            @include general-title($text-4xxl, $color-title, $font-bold, center);
-            @include MediaQuery($sm) {
-                font-size: $text-2xl;
-            }
-        }
-        span {
-            @include general-span($text-base, $color-text, 1rem auto, 100%);
-        }
+  padding-top: 3rem;
+  background-color: $c1;
+  .product__title {
+    padding: 1rem 0 3rem 0;
+    max-width: 750px;
+    margin: auto;
+    h3 {
+      @include general-title($text-base, $color-primary, $font-bold, center);
     }
-    .product__content {
-        padding-bottom: 3rem;
-        .row {
-            display: flex;
-            @include MediaQuery($sm) {
-                flex-direction: column;
-            }
-            .column {
-                @include MediaQuery($sm) {
-                    padding: 1.25rem    ;
-                }
-                flex-basis: calc(100%/3);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .product__content-item {
-                    display: flex;
-                    .product__item-number {
-                        padding: 0 0.625rem;
-                        span {
-                            font-size: $text-xl;
-                            width: 2.5rem;
-                            height: 2.5rem;
-                            line-height: 2.5rem;
-                            background-color: $color-white;
-                            color: $color-primary;
-                            text-align: center;
-                            border-radius: 50%;
-                            display: inline-block;
-                            font-weight: $font-bold;
-                            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);;
-                        }
-                    }
-                    .product__item-text {
-                        padding: 0 0.625rem;
-                        h1 {
-                            @include general-title($text-lg, $color-title, $font-bold, left);
-                            transition: 0.3s ease-in;
-                            cursor: pointer;
-                            &:hover {
-                                color: $color-primary
-                            }
-                        }
-                        span {
-                            @include general-span($text-base, $color-text, 1rem auto, 100%, left);
-                        }
-                    }
-                }
-                img {
-                    width: 100%;
-                    border-radius: 50%;
-                    transition: 0.3s ease-in-out;
-                    &:hover {
-                        transform: translateY(-1.25rem);
-                    }
-                }
-            }
-        }
+    h1 {
+      @include general-title($text-4xxl, $color-title, $font-bold, center);
+      @include MediaQuery($sm) {
+        font-size: $text-2xl;
+      }
     }
+    span {
+      @include general-span($text-base, $color-text, 1rem auto, 100%);
+    }
+  }
+  .product__content {
+    padding-bottom: 3rem;
+    .row {
+      display: flex;
+      @include MediaQuery($sm) {
+        flex-direction: column;
+      }
+      .column {
+        @include MediaQuery($sm) {
+          padding: 1.25rem;
+        }
+        flex-basis: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .product__content-item {
+          display: flex;
+          .product__item-number {
+            padding: 0 0.625rem;
+            span {
+              font-size: $text-xl;
+              width: 2.5rem;
+              height: 2.5rem;
+              line-height: 2.5rem;
+              background-color: $color-white;
+              color: $color-primary;
+              text-align: center;
+              border-radius: 50%;
+              display: inline-block;
+              font-weight: $font-bold;
+              box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+            }
+          }
+          .product__item-text {
+            padding: 0 0.625rem;
+            h1 {
+              @include general-title($text-lg, $color-title, $font-bold, left);
+              transition: 0.3s ease-in;
+              cursor: pointer;
+              &:hover {
+                color: $color-primary;
+              }
+            }
+            span {
+              @include general-span(
+                $text-base,
+                $color-text,
+                1rem auto,
+                100%,
+                left
+              );
+            }
+          }
+        }
+        img {
+          width: 100%;
+          border-radius: 50%;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            transform: translateY(-1.25rem);
+          }
+        }
+      }
+    }
+  }
 }
 
 // Feature
 
 .feature {
-    .container {
-        padding-top: 3rem;
-        padding-left: unset;
-        padding-right: unset;
-        .feature__title {
-            padding: 3rem 0;
-            max-width: 750px;
-            margin: 0 auto;
-            h3 {
-                @include general-title($text-base, $color-primary, $font-bold, center);
+  .container {
+    padding-top: 3rem;
+    padding-left: unset;
+    padding-right: unset;
+    .feature__title {
+      padding: 3rem 0;
+      max-width: 750px;
+      margin: 0 auto;
+      h3 {
+        @include general-title($text-base, $color-primary, $font-bold, center);
+      }
+      h1 {
+        @include general-title(
+          $text-4xxl,
+          $color-title,
+          $font-semibold,
+          center
+        );
+        @include MediaQuery($sm) {
+          font-size: $text-2xl;
+        }
+      }
+      span {
+        @include general-span($text-base, $color-text, 1rem auto, 100%);
+      }
+    }
+    .feature__content {
+      .row {
+        display: flex;
+        @include MediaQuery($sm) {
+          flex-direction: column;
+          margin-top: -3rem;
+        }
+        .feature__content-left {
+          flex-basis: 50%;
+          padding: 2rem 1rem 0 0;
+          @include MediaQuery($sm) {
+            overflow: hidden;
+            margin-top: 1.25rem;
+          }
+          .content-item {
+            @include MediaQuery($sm) {
+              max-height: unset;
             }
+            max-height: 49.25rem;
+            padding: 2rem;
+            border: 1px solid $c1-355;
+            border-radius: 5px;
             h1 {
-                @include general-title($text-4xxl, $color-title, $font-semibold, center);
-                @include MediaQuery($sm){
-                    font-size: $text-2xl;
-                }
+              @include general-title($text-4xl, $color-title, $font-bold, left);
+              @include MediaQuery($sm) {
+                font-size: $text-2xl;
+              }
             }
             span {
-                @include general-span($text-base, $color-text, 1rem auto, 100%);
+              @include general-span(
+                $text-base,
+                $color-text,
+                1rem auto,
+                100%,
+                left
+              );
             }
-        }
-        .feature__content {
-            .row {
-                display: flex;
-                @include MediaQuery($sm){
-                    flex-direction: column;
-                    margin-top: -3rem   ;
+            ul {
+              padding-left: unset;
+              list-style-type: none;
+              li {
+                margin: 1rem 0;
+                font-weight: $font-semibold;
+                i {
+                  padding: 5px;
+                  margin-right: 0.625rem;
+                  background-color: $c1-300;
+                  border-radius: 50%;
+                  color: $color-primary;
+                  font-size: $text-xs;
                 }
-                .feature__content-left {
-                    flex-basis: 50%;
-                    padding: 2rem 1rem 0 0;
-                    @include MediaQuery($sm){
-                        overflow: hidden;
-                        margin-top: 1.25rem;
-                    };
-                    .content-item {
-                        @include MediaQuery($sm){
-                            max-height: unset;
-                        };
-                        max-height: 49.25rem;
-                        padding: 2rem;
-                        border: 1px solid $c1-355;
-                        border-radius: 5px;
-                        h1 {
-                            @include general-title($text-4xl, $color-title, $font-bold, left);
-                            @include MediaQuery($sm){
-                                font-size: $text-2xl;
-                            }
-                        }
-                        span {
-                            @include general-span($text-base, $color-text, 1rem auto, 100%, left);
-                        }
-                        ul {
-                            padding-left: unset;
-                            list-style-type: none;
-                            li {
-                                margin: 1rem 0;
-                                font-weight: $font-semibold;
-                               i {
-                                   padding: 5px;
-                                   margin-right: 0.625rem;
-                                   background-color: $c1-300;
-                                   border-radius: 50%;
-                                   color: $color-primary;
-                                   font-size: $text-xs;
-                               }
-                            }
-                        }
-                        a {
-                            display: block;
-                            margin-bottom: 3.75rem;
-                            button {
-                                @include general-btn(1rem 1.875rem, 0.25rem, $color-primary,  $color-white);
-                                &:hover {
-                                    background-color: $c1-400;
-                                }
-                            }
-                        }
-                        img {
-                            width: 100%;
-                            border-radius: 5px;
-                            transition: 0.3s ease-in-out;
-                            &:hover {
-                                transform: translateY(-1rem);
-                            }
-                        }
-                    }
-                }
-                .feature__content-right {
-                    @include MediaQuery($sm){
-                        overflow: hidden;
-                        margin-top: 1.25rem;
-                    };
-                    flex-basis: 50%;
-                    padding: 2rem 1rem 0;
-                    .content-item {
-                        @include MediaQuery($sm){
-                            max-height: unset;
-                        };
-                        max-height: 49.25rem;
-                        padding: 2rem;
-                        border: 1px solid $c1-355;
-                        border-radius: 5px;
-                        img {
-                            width: 100%;
-                            border-radius: 5px;
-                            transition: 0.3s ease-in-out;
-                            &:hover {
-                                transform: translateY(-1rem);
-                            }
-                        }
-                        h1 {
-                            margin-top: 3.57rem;
-                            @include general-title($text-4xxl, $color-title, $font-bold, left);
-                            @include MediaQuery($sm){
-                                font-size: $text-2xl;
-                            }
-                        }
-                        span {
-                            @include general-span($text-base, $color-text, 1rem auto, 100%, left);
-                        }
-                        a {
-                            display: block;
-                            button {
-                                @include general-btn(1rem 1.875rem, 0.25rem, $color-primary,  $color-white);
-                                &:hover {
-                                    background-color: $c1-400;
-                                }
-                            }
-                        }
-                    }
-                }
+              }
             }
+            a {
+              display: block;
+              margin-bottom: 3.75rem;
+              button {
+                @include general-btn(
+                  1rem 1.875rem,
+                  0.25rem,
+                  $color-primary,
+                  $color-white
+                );
+                &:hover {
+                  background-color: $c1-400;
+                }
+              }
+            }
+            img {
+              width: 100%;
+              border-radius: 5px;
+              transition: 0.3s ease-in-out;
+              &:hover {
+                transform: translateY(-1rem);
+              }
+            }
+          }
         }
+        .feature__content-right {
+          @include MediaQuery($sm) {
+            overflow: hidden;
+            margin-top: 1.25rem;
+          }
+          flex-basis: 50%;
+          padding: 2rem 1rem 0;
+          .content-item {
+            @include MediaQuery($sm) {
+              max-height: unset;
+            }
+            max-height: 49.25rem;
+            padding: 2rem;
+            border: 1px solid $c1-355;
+            border-radius: 5px;
+            img {
+              width: 100%;
+              border-radius: 5px;
+              transition: 0.3s ease-in-out;
+              &:hover {
+                transform: translateY(-1rem);
+              }
+            }
+            h1 {
+              margin-top: 3.57rem;
+              @include general-title(
+                $text-4xxl,
+                $color-title,
+                $font-bold,
+                left
+              );
+              @include MediaQuery($sm) {
+                font-size: $text-2xl;
+              }
+            }
+            span {
+              @include general-span(
+                $text-base,
+                $color-text,
+                1rem auto,
+                100%,
+                left
+              );
+            }
+            a {
+              display: block;
+              button {
+                @include general-btn(
+                  1rem 1.875rem,
+                  0.25rem,
+                  $color-primary,
+                  $color-white
+                );
+                &:hover {
+                  background-color: $c1-400;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
 
-// Footer 
+// Footer
 .footer {
-    margin-top: 6.25rem;
-    background-color: $c1;
-    .footer__up {
-        padding: 3.75rem 0;
-        border-bottom: 1px solid $c1-350;
-        display: flex;
-        justify-content: space-between;
-        .footer__up-item1 {
-            flex: 1;
-            h1 {
-                @include general-title($text-lg, $color-title, $font-bold, left);
-            }
-            span {
-                @include general-span($text-sm, $color-text, 1rem 0, 100%, left);
-                transition: all 0.4s;
-                cursor: pointer;
-                &:hover {
-                    color: $color-primary;
-                }
-            }
+  margin-top: 6.25rem;
+  background-color: $c1;
+  .footer__up {
+    padding: 3.75rem 0;
+    border-bottom: 1px solid $c1-350;
+    display: flex;
+    justify-content: space-between;
+    .footer__up-item1 {
+      flex: 1;
+      h1 {
+        @include general-title($text-lg, $color-title, $font-bold, left);
+      }
+      span {
+        @include general-span($text-sm, $color-text, 1rem 0, 100%, left);
+        transition: all 0.4s;
+        cursor: pointer;
+        &:hover {
+          color: $color-primary;
         }
-        .footer__up-item2 {
-            margin-left: 6rem;
-            flex: 3;
-            h1 {
-                @include general-title($text-lg, $color-title, $font-bold, center);
-            }
-            .footer__up-email {
-                padding: 2rem;
-                border-radius: 0.625rem;
-                background-color: $color-white;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                input {
-                    padding: 0.625rem 7rem 0.625rem 0.625rem;
-                    font-size: $text-sm;
-                    border-radius: 5px;
-                    border: none;
-                    background-color: $c1;
-                    outline: none;
-                }
-                a {
-                    button {
-                        @include general-btn(0.625rem 1.875rem, 0.25rem, $color-primary,  $color-white);
-                        display: inline;
-                    }
-                }
-                span {
-                    @include general-span($text-sm, $color-text, 1rem 0 0 0, 100%, left);
-                }
-            }
-        }
+      }
     }
-    .footer__down {
-        padding: 2.5rem 0;
+    .footer__up-item2 {
+      margin-left: 6rem;
+      flex: 3;
+      h1 {
+        @include general-title($text-lg, $color-title, $font-bold, center);
+      }
+      .footer__up-email {
+        padding: 2rem;
+        border-radius: 0.625rem;
+        background-color: $color-white;
         display: flex;
-        justify-content: space-between;
-        .footer__down-content {
-            span {
-                @include general-span($text-sm, $color-text, 1rem 0);
-            }
+        flex-direction: column;
+        justify-content: space-around;
+        input {
+          padding: 0.625rem 7rem 0.625rem 0.625rem;
+          font-size: $text-sm;
+          border-radius: 5px;
+          border: none;
+          background-color: $c1;
+          outline: none;
         }
-        .footer__down-icon {
-            a {
-                color: unset;
-                font-size: $text-sm;
-                margin-right: 1.25rem;
-                transition: all 0.4s;
-                &:hover {
-                    color: $color-primary;
-                }
-            }
+        a {
+          button {
+            @include general-btn(
+              0.625rem 1.875rem,
+              0.25rem,
+              $color-primary,
+              $color-white
+            );
+            display: inline;
+          }
         }
+        span {
+          @include general-span($text-sm, $color-text, 1rem 0 0 0, 100%, left);
+        }
+      }
     }
+  }
+  .footer__down {
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    .footer__down-content {
+      span {
+        @include general-span($text-sm, $color-text, 1rem 0);
+      }
+    }
+    .footer__down-icon {
+      a {
+        color: unset;
+        font-size: $text-sm;
+        margin-right: 1.25rem;
+        transition: all 0.4s;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
 }
